@@ -26,6 +26,9 @@ private:
     cudaStream_t   stream;
     cufftHandle    plan1d;
     cublasHandle_t cublas_handle;
+    int            i_min_grid_size;
+    int            i_block_size;
+    float*         win_coe;
 
 protected:
     int calculate_output_stream_length(const gr_vector_int& ninput_items);

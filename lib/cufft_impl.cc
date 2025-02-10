@@ -11,6 +11,18 @@
 #include <gnuradio/io_signature.h>
 #include <stdexcept>
 
+void get_block_and_grid(int* minGrid, int* minBlock);
+void genHammingWindow(const int& win_width, float* out, int grid_size, int block_size,
+                      cudaStream_t stream);
+void genHanningWindow(const int& win_width, float* out, int grid_size, int block_size,
+                      cudaStream_t stream);
+
+void genBlackmanWindow(const int& win_width, float* out, int grid_size, int block_size,
+                       cudaStream_t stream);
+
+void ApplayWindow(const int& win_width, float* coe, cuComplex* out, int grid_size, int block_size,
+                  cudaStream_t stream);
+
 namespace gr {
 namespace cuda {
 
@@ -37,6 +49,7 @@ cufft_impl::cufft_impl(int fft_num, const std::string& len_key, bool forward)
     , i_fft_num(fft_num)
     , b_forward(forward)
 {
+    get_block_and_grid(&this->i_min_grid_size, &this->i_block_size);
     check_cuda_errors(cudaStreamCreate(&this->stream));
     cufftResult_t r = cufftPlan1d(&this->plan1d, this->i_fft_num, CUFFT_C2C, 1);
     if (r != CUFFT_SUCCESS) {
