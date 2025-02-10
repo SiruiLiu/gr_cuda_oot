@@ -16,5 +16,6 @@ install(FILES
     cuda_block.h
     copy.h
     multiply_const.h
-    load.h DESTINATION include/gnuradio/cuda
+    load.h
+    cufft.h DESTINATION include/gnuradio/cuda
 )
