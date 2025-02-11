@@ -14,15 +14,15 @@
 
 void get_block_and_grid(const std::string& win_type, int* minGrid_win, int* minBlock_win,
                         int* minGrid_apply, int* minBlock_apply);
-void genHammingWindow(const int& win_width, float* out, int grid_size, int block_size,
+void genHammingWindow(int win_width, float* out, int grid_size, int block_size,
                       cudaStream_t stream);
-void genHanningWindow(const int& win_width, float* out, int grid_size, int block_size,
+void genHanningWindow(int win_width, float* out, int grid_size, int block_size,
                       cudaStream_t stream);
 
-void genBlackmanWindow(const int& win_width, float* out, int grid_size, int block_size,
+void genBlackmanWindow(int win_width, float* out, int grid_size, int block_size,
                        cudaStream_t stream);
 
-void ApplayWindow(const int& win_width, float* coe, cuComplex* out, int grid_size, int block_size,
+void ApplayWindow(int win_width, float* coe, cuComplex* out, int grid_size, int block_size,
                   cudaStream_t stream);
 
 namespace gr {
@@ -53,12 +53,11 @@ cufft_impl::cufft_impl(int fft_num, const std::string& len_key, bool forward, st
     , s_win_type(win_type)
 {
     cudaGetDeviceProperties(&(this->prop), 0);
-    get_block_and_grid(this->s_win_type,
-                       &this->i_min_grid_size_win,
-                       &this->i_block_size_win,
-                       &this->i_min_grid_size,
-                       &this->i_block_size);
+    this->i_block_size    = this->prop.maxBlocksPerMultiProcessor;
+    this->i_min_grid_size = ceil((this->i_fft_num + this->i_block_size - 1) / this->i_block_size);
     check_cuda_errors(cudaStreamCreate(&this->stream));
+    check_cuda_errors(
+        cudaMallocAsync((void**)&this->win_coe, sizeof(float) * this->i_fft_num, this->stream));
     cufftResult_t r = cufftPlan1d(&this->plan1d, this->i_fft_num, CUFFT_C2C, 1);
     if (r != CUFFT_SUCCESS) {
         throw std::runtime_error("Failed to create fft plan");
@@ -72,26 +71,30 @@ cufft_impl::cufft_impl(int fft_num, const std::string& len_key, bool forward, st
         throw std::runtime_error("Failed to initialize CUBLAS");
     }
     if (this->b_forward) {   // Only forward FFT needs window coefficients.
+        std::cout << "Do window coefficients generating" << std::endl;
         if (this->s_win_type == "Hamming") {
             genHammingWindow(this->i_fft_num,
                              this->win_coe,
-                             this->i_min_grid_size_win,
-                             this->i_block_size_win,
+                             this->i_min_grid_size,
+                             this->i_block_size,
                              this->stream);
+            std::cout << "Finished" << std::endl;
         }
         else if (this->s_win_type == "Hanning") {
             genHanningWindow(this->i_fft_num,
                              this->win_coe,
-                             this->i_min_grid_size_win,
-                             this->i_block_size_win,
+                             this->i_min_grid_size,
+                             this->i_block_size,
                              this->stream);
+            std::cout << "Finished" << std::endl;
         }
         else if (this->s_win_type == "Blackman") {
             genBlackmanWindow(this->i_fft_num,
                               this->win_coe,
-                              this->i_min_grid_size_win,
-                              this->i_block_size_win,
+                              this->i_min_grid_size,
+                              this->i_block_size,
                               this->stream);
+            std::cout << "Finished" << std::endl;
         }
     }
 }
@@ -125,11 +128,11 @@ int cufft_impl::work(int noutput_items, gr_vector_int& ninput_items,
                          this->i_block_size,
                          this->stream);
         }
-        // cufftExecC2C(this->plan1d, (cufftComplex*)in, (cufftComplex*)out, CUFFT_FORWARD);
-        // float scale = 1.0f / this->i_fft_num;
-        // cublasSscal(cublas_handle, 2 * this->i_fft_num, &scale, (float*)out, 1);
-        check_cuda_errors(cudaMemcpyAsync(
-            out, in, sizeof(gr_complex) * this->i_fft_num, cudaMemcpyDeviceToDevice, this->stream));
+        cufftExecC2C(this->plan1d, (cufftComplex*)in, (cufftComplex*)out, CUFFT_FORWARD);
+        float scale = 1.0f / this->i_fft_num;
+        cublasSscal(cublas_handle, 2 * this->i_fft_num, &scale, (float*)out, 1);
+        // check_cuda_errors(cudaMemcpyAsync(
+        // out, in, sizeof(gr_complex) * this->i_fft_num, cudaMemcpyDeviceToDevice, this->stream));
     }
     else {
         cufftExecC2C(this->plan1d, (cufftComplex*)in, (cufftComplex*)out, CUFFT_INVERSE);
