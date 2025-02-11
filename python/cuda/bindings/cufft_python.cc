@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(cufft.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(aee0f9577329fd898b226a89b08137a2)                     */
+/* BINDTOOL_HEADER_FILE_HASH(7becdc7a239034f7ecab810bba03fbda)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,30 +30,22 @@ namespace py = pybind11;
 void bind_cufft(py::module& m)
 {
 
-    using cufft    = gr::cuda::cufft;
+    using cufft = ::gr::cuda::cufft;
 
 
-    py::class_<cufft, gr::tagged_stream_block, gr::block, gr::basic_block,
-        std::shared_ptr<cufft>>(m, "cufft", D(cufft))
+    py::class_<cufft,
+               gr::tagged_stream_block,
+               gr::block,
+               gr::basic_block,
+               std::shared_ptr<cufft>>(m, "cufft", D(cufft))
 
         .def(py::init(&cufft::make),
-           D(cufft,make)
-        )
-        
-
+             py::arg("fft_num"),
+             py::arg("len_key"),
+             py::arg("forward"),
+             py::arg("win_type"),
+             D(cufft, make))
 
 
         ;
-
-
-
-
 }
-
-
-
-
-
-
-
-

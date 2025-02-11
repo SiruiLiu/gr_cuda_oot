@@ -4,7 +4,7 @@ category: '[cuda]'
 
 templates:
   imports: from gnuradio import cuda
-  make: cuda.cufft(${fft_num}, ${len_key}, ${forward})
+  make: cuda.cufft(${fft_num}, ${len_key}, ${forward}, ${win_type})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -26,6 +26,11 @@ parameters:
   dtype: enum
   options: ["True", "False"]
   option_labels: [Foward, Reverse]
+- id: win_type
+  label: Window type
+  dtype: enum
+  options: ['"Rectangle"', '"Hamming"', '"Hanning"', '"Blackman"']
+  option_labels: [Rectangle, Hamming, Hanning, Blackman]
 #- id: ...
 #  label: ...
 #  dtype: ...

@@ -15,13 +15,10 @@
  */
 
 
-
- static const char *__doc_gr_cuda_cufft = R"doc()doc";
-
-
- static const char *__doc_gr_cuda_cufft_cufft = R"doc()doc";
+static const char* __doc_gr_cuda_cufft = R"doc()doc";
 
 
- static const char *__doc_gr_cuda_cufft_make = R"doc()doc";
+static const char* __doc_gr_cuda_cufft_cufft = R"doc()doc";
 
-  
+
+static const char* __doc_gr_cuda_cufft_make = R"doc()doc";

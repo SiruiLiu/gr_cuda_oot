@@ -1,7 +1,5 @@
 #include <gnuradio/cuda/cuda_error.h>
 #include <cuComplex.h>
-#include <__clang_cuda_builtin_vars.h>
-#include <__clang_cuda_runtime_wrapper.h>
 #include <cuda.h>
 #include <cuda_runtime.h>
 #include <gnuradio/gr_complex.h>
@@ -57,8 +55,20 @@ void ApplayWindow(const int& win_width, float* coe, cuComplex* out, int grid_siz
     check_cuda_errors(cudaGetLastError());
 }
 
-void get_block_and_grid(int* minGrid, int* minBlock)
+void get_block_and_grid(const std::string& win_type, int* minGrid_win, int* minBlock_win, int* minGrid_apply, int* minBlock_apply)
 {
+    if(win_type == "Hamming"){
+        check_cuda_errors(cudaOccupancyMaxPotentialBlockSize(
+            minGrid_win, minBlock_win, genHammingWindow, 0, 0));
+    }
+    else if(win_type == "Hanning"){
+        check_cuda_errors(cudaOccupancyMaxPotentialBlockSize(
+            minGrid_win, minBlock_win, genHanningWindow, 0, 0));
+    }
+    else if(win_type == "Blackman"){
+        check_cuda_errors(cudaOccupancyMaxPotentialBlockSize(
+            minGrid_win, minBlock_win, genBlackmanWindow, 0, 0));
+    }
     check_cuda_errors(cudaOccupancyMaxPotentialBlockSize(
-        minGrid, minBlock, ApplayWindow, 0, 0));
+        minGrid_apply, minBlock_apply, ApplayWindow, 0, 0));
 }

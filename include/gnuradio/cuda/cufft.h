@@ -32,10 +32,10 @@ public:
      * class. cuda::cufft::make is the public interface for
      * creating new instances.
      */
-    static sptr make(int fft_num, const std::string& len_key, bool forward);
+    static sptr make(int fft_num, const std::string& len_key, bool forward, std::string win_type);
 };
 
-} // namespace cuda
-} // namespace gr
+}   // namespace cuda
+}   // namespace gr
 
 #endif /* INCLUDED_CUDA_CUFFT_H */
