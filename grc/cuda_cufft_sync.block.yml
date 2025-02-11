@@ -13,10 +13,20 @@ templates:
 #     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
 #     * default
 parameters:
-- id: parametername_replace_me
-  label: FIX ME:
-  dtype: string
-  default: You need to fill in your grc/cuda_cufft_sync.block.yaml
+- id: fft_num
+  label: FFT_NUM
+  dtype: int
+  default: 1024
+- id: forward
+  label: Do FFT or IFFT
+  dtype: enum
+  options: ["True", "False"]
+  option_labels: [Foward, Reverse]
+- id: win_type
+  label: Window type
+  dtype: enum
+  options: ['"Rectangle"', '"Hamming"', '"Hanning"', '"Blackman"']
+  option_labels: [Rectangle, Hamming, Hanning, Blackman]
 #- id: ...
 #  label: ...
 #  dtype: ...
@@ -29,6 +39,9 @@ parameters:
 #      * vlen (optional - data stream vector length. Default is 1)
 #      * optional (optional - set to 1 for optional inputs. Default is 0)
 inputs:
+-   label: IQ in
+    domain: stream
+    dtype: complex
 #- label: ...
 #  domain: ...
 #  dtype: ...
@@ -36,6 +49,9 @@ inputs:
 #  optional: ...
 
 outputs:
+-   label: IQ out
+    domain: stream
+    dtype: complex
 #- label: ...
 #  domain: ...
 #  dtype: ...

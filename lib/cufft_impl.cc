@@ -5,8 +5,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include "apply_window.h"
+#include "apply_window.cuh"
 #include "cufft_impl.h"
+#include "cufft_sync_impl.h"
 #include <gnuradio/cuda/cuda_buffer.h>
 #include <gnuradio/cuda/cuda_error.h>
 #include <gnuradio/gr_complex.h>
@@ -91,7 +92,13 @@ cufft_impl::cufft_impl(int fft_num, const std::string& len_key, bool forward, st
 /*
  * Our virtual destructor.
  */
-cufft_impl::~cufft_impl() {}
+cufft_impl::~cufft_impl()
+{
+    cudaFree(this->win_coe);
+    cudaStreamDestroy(this->stream);
+    cufftDestroy(this->plan1d);
+    cublasDestroy_v2(this->cublas_handle);
+}
 
 int cufft_impl::calculate_output_stream_length(const gr_vector_int& ninput_items)
 {
