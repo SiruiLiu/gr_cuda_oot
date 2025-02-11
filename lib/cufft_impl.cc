@@ -5,6 +5,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+#include "apply_window.h"
 #include "cufft_impl.h"
 #include <gnuradio/cuda/cuda_buffer.h>
 #include <gnuradio/cuda/cuda_error.h>
@@ -12,18 +13,6 @@
 #include <gnuradio/io_signature.h>
 #include <stdexcept>
 
-void get_block_and_grid(const std::string& win_type, int* minGrid_win, int* minBlock_win,
-                        int* minGrid_apply, int* minBlock_apply);
-void genHammingWindow(int win_width, float* out, int grid_size, int block_size,
-                      cudaStream_t stream);
-void genHanningWindow(int win_width, float* out, int grid_size, int block_size,
-                      cudaStream_t stream);
-
-void genBlackmanWindow(int win_width, float* out, int grid_size, int block_size,
-                       cudaStream_t stream);
-
-void ApplayWindow(int win_width, float* coe, cuComplex* out, int grid_size, int block_size,
-                  cudaStream_t stream);
 
 namespace gr {
 namespace cuda {

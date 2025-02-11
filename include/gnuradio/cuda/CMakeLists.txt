@@ -17,5 +17,7 @@ install(FILES
     copy.h
     multiply_const.h
     load.h
-    cufft.h DESTINATION include/gnuradio/cuda
+    cufft.h
+    Multi_Channel_DDC.h
+    cufft_sync.h DESTINATION include/gnuradio/cuda
 )

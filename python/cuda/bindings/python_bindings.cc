@@ -25,6 +25,8 @@ void bind_copy(py::module &m);
     void bind_multiply_const(py::module& m);
     void bind_load(py::module& m);
     void bind_cufft(py::module& m);
+    void bind_Multi_Channel_DDC(py::module& m);
+    void bind_cufft_sync(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -57,5 +59,7 @@ PYBIND11_MODULE(cuda_python, m)
     bind_multiply_const(m);
     bind_load(m);
     bind_cufft(m);
+    bind_Multi_Channel_DDC(m);
+    bind_cufft_sync(m);
     // ) END BINDING_FUNCTION_CALLS
 }

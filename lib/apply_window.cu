@@ -4,6 +4,7 @@
 #include <cuda_runtime.h>
 #include <gnuradio/gr_complex.h>
 #include <gnuradio/io_signature.h>
+#include "apply_window.h"
 
 __global__ void kernelHammingWindow(int win_width, float* out){
     int i = blockIdx.x*blockDim.x + threadIdx.x;

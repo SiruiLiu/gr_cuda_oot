@@ -11,5 +11,7 @@ install(FILES
     cuda_copy.block.yml
     cuda_multiply_const_xx.block.yml
     cuda_load.block.yml
-    cuda_cufft.block.yml DESTINATION share/gnuradio/grc/blocks
+    cuda_cufft.block.yml
+    cuda_Multi_Channel_DDC.block.yml
+    cuda_cufft_sync.block.yml DESTINATION share/gnuradio/grc/blocks
 )

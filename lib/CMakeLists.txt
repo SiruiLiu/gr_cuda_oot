@@ -38,6 +38,8 @@ list(APPEND cuda_sources
     multiply_const_impl.cc
     load_impl.cc
     cufft_impl.cc
+    Multi_Channel_DDC_impl.cc
+    cufft_sync_impl.cc
 )
 
 set(cuda_sources "${cuda_sources}" PARENT_SCOPE)
