@@ -4,7 +4,7 @@ category: '[cuda]'
 
 templates:
   imports: from gnuradio import cuda
-  make: cuda.Multi_Channel_DDC(${channel_num})
+  make: cuda.Multi_Channel_DDC(${channel_num}, ${sample_rate}, ${vector_length})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -13,10 +13,18 @@ templates:
 #     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
 #     * default
 parameters:
-- id: parametername_replace_me
-  label: FIX ME:
-  dtype: string
-  default: You need to fill in your grc/cuda_Multi_Channel_DDC.block.yaml
+- id: channel_num
+  label: Channel Number
+  dtype: int
+  default: 1
+- id: sample_rate
+  label: Sample Rate
+  dtype: real
+  default: samp_rate
+- id: vector_length
+  label: Vector Length
+  dtype: int
+  default: 1024
 #- id: ...
 #  label: ...
 #  dtype: ...
@@ -29,13 +37,20 @@ parameters:
 #      * vlen (optional - data stream vector length. Default is 1)
 #      * optional (optional - set to 1 for optional inputs. Default is 0)
 inputs:
-#- label: ...
-#  domain: ...
-#  dtype: ...
+- label: in
+  domain: stream
+  dtype: complex
+  multiplicity: ${channel_num}
+  vlen: ${vector_length}
 #  vlen: ...
 #  optional: ...
 
 outputs:
+- label: out
+  domain: stream
+  dtype: complex
+  multiplicity: ${channel_num}
+  vlen: ${vector_length}
 #- label: ...
 #  domain: ...
 #  dtype: ...

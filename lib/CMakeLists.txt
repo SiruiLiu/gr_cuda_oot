@@ -20,6 +20,7 @@ add_library(gnuradio-cuda-cu STATIC
     multiply_const.cu
     load.cu
     apply_window.cu
+    multi_ch.cu
 )
 set_target_properties(gnuradio-cuda-cu PROPERTIES 
     POSITION_INDEPENDENT_CODE ON

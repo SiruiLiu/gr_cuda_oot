@@ -32,10 +32,10 @@ public:
      * class. cuda::Multi_Channel_DDC::make is the public interface for
      * creating new instances.
      */
-    static sptr make(int channel_num);
+    static sptr make(int channel_num, float sample_rate, int vector_length);
 };
 
-} // namespace cuda
-} // namespace gr
+}   // namespace cuda
+}   // namespace gr
 
 #endif /* INCLUDED_CUDA_MULTI_CHANNEL_DDC_H */

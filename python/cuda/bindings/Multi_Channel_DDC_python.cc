@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(Multi_Channel_DDC.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(b5a9681a068d406f48c75a7f48fc4d97)                     */
+/* BINDTOOL_HEADER_FILE_HASH(152e5c98912f2380a238a5d7eda654f7)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,30 +30,22 @@ namespace py = pybind11;
 void bind_Multi_Channel_DDC(py::module& m)
 {
 
-    using Multi_Channel_DDC    = gr::cuda::Multi_Channel_DDC;
+    using Multi_Channel_DDC = ::gr::cuda::Multi_Channel_DDC;
 
 
-    py::class_<Multi_Channel_DDC, gr::sync_block, gr::block, gr::basic_block,
-        std::shared_ptr<Multi_Channel_DDC>>(m, "Multi_Channel_DDC", D(Multi_Channel_DDC))
+    py::class_<Multi_Channel_DDC,
+               gr::sync_block,
+               gr::block,
+               gr::basic_block,
+               std::shared_ptr<Multi_Channel_DDC>>(
+        m, "Multi_Channel_DDC", D(Multi_Channel_DDC))
 
         .def(py::init(&Multi_Channel_DDC::make),
-           D(Multi_Channel_DDC,make)
-        )
-        
-
+             py::arg("channel_num"),
+             py::arg("sample_rate"),
+             py::arg("vector_length"),
+             D(Multi_Channel_DDC, make))
 
 
         ;
-
-
-
-
 }
-
-
-
-
-
-
-
-

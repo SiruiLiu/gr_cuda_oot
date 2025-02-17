@@ -15,13 +15,10 @@
  */
 
 
-
- static const char *__doc_gr_cuda_Multi_Channel_DDC = R"doc()doc";
-
-
- static const char *__doc_gr_cuda_Multi_Channel_DDC_Multi_Channel_DDC = R"doc()doc";
+static const char* __doc_gr_cuda_Multi_Channel_DDC = R"doc()doc";
 
 
- static const char *__doc_gr_cuda_Multi_Channel_DDC_make = R"doc()doc";
+static const char* __doc_gr_cuda_Multi_Channel_DDC_Multi_Channel_DDC = R"doc()doc";
 
-  
+
+static const char* __doc_gr_cuda_Multi_Channel_DDC_make = R"doc()doc";
