@@ -9,6 +9,7 @@
 #define INCLUDED_CUDA_MULTI_CHANNEL_DDC_IMPL_H
 
 #include "cufft_impl.h"
+#include <cstddef>
 #include <cuda_runtime_api.h>
 #include <cufft.h>
 #include <gnuradio/cuda/Multi_Channel_DDC.h>
@@ -26,7 +27,7 @@ private:
     float          f_sr      = 1.0f;
     int            i_ch_n    = 0;
     cudaStream_t   stream;
-    cufftHandle*   plan1d;
+    cufftHandle    plan1d;
     cublasHandle_t cublas_handle;
     int            i_min_grid_size_for_fft;
     int            i_block_size_for_fft;
@@ -34,6 +35,7 @@ private:
     int            i_block_size_for_in2out;
     float*         win_coe = nullptr;
     cudaDeviceProp prop;
+    size_t*        p_complex_size_vector = nullptr;
 
 public:
     Multi_Channel_DDC_impl(int channel_num, float sample_rate, int vector_length);

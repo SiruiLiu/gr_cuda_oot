@@ -9,6 +9,7 @@
 #include "cufft_impl.h"
 #include "gnuradio/cuda/Multi_Channel_DDC.h"
 #include "multi_ch.cuh"
+#include <cstddef>
 #include <cuda_runtime.h>
 #include <gnuradio/cuda/cuda_buffer.h>
 #include <gnuradio/cuda/cuda_error.h>
@@ -44,24 +45,21 @@ Multi_Channel_DDC_impl::Multi_Channel_DDC_impl(int channel_num, float sample_rat
     , f_sr(sample_rate)
     , i_fft_num(vector_length)
 {
-    // std::cout << "0000" << std::endl;
     check_cuda_errors(cudaStreamCreate(&this->stream));
-    // std::cout << "1111" << std::endl;
-    // check_cuda_errors(
-    // cudaMallocAsync((void**)&this->win_coe, sizeof(float) * this->i_fft_num, *this->stream));
-    // std::cout << "2222" << std::endl;
-    // cufftResult_t r = cufftPlan1d(this->plan1d, this->i_fft_num, CUFFT_C2C, 1);
-    // if (r != CUFFT_SUCCESS) {
-    // throw std::runtime_error("Failed to create fft plan");
-    // }
-    // std::cout << "3333" << std::endl;
-    // cublasStatus_t status = cublasCreate(&this->cublas_handle);
-    // if (status != CUBLAS_STATUS_SUCCESS) {
-    // throw std::runtime_error("Failed to initialize CUBLAS");
-    // }
-    // std::cout << "4444" << std::endl;
-    // r = cufftSetStream(*this->plan1d, *this->stream);
-    // std::cout << "5555" << std::endl;
+    check_cuda_errors(
+        cudaMallocAsync((void**)&this->win_coe, sizeof(float) * this->i_fft_num, this->stream));
+    cufftResult_t r = cufftPlan1d(&this->plan1d, this->i_fft_num, CUFFT_C2C, 1);
+    if (r != CUFFT_SUCCESS) {
+        throw std::runtime_error("Failed to create fft plan");
+    }
+    cublasStatus_t status = cublasCreate(&this->cublas_handle);
+    if (status != CUBLAS_STATUS_SUCCESS) {
+        throw std::runtime_error("Failed to initialize CUBLAS");
+    }
+    r                           = cufftSetStream(this->plan1d, this->stream);
+    this->p_complex_size_vector = new size_t[this->i_ch_n];
+    memset(
+        this->p_complex_size_vector, (size_t)(sizeof(gr_complex) * this->i_fft_num), this->i_ch_n);
 }
 
 /*
@@ -69,10 +67,12 @@ Multi_Channel_DDC_impl::Multi_Channel_DDC_impl(int channel_num, float sample_rat
  */
 Multi_Channel_DDC_impl::~Multi_Channel_DDC_impl()
 {
-    // cufftDestroy(*this->plan1d);
-    // cublasDestroy(cublas_handle);
+    cufftDestroy(this->plan1d);
+    cublasDestroy(cublas_handle);
     cudaStreamDestroy(this->stream);
-    // cudaFree(this->win_coe);
+    cudaFree(this->win_coe);
+    delete this->p_complex_size_vector;
+    this->p_complex_size_vector = nullptr;
 }
 
 int Multi_Channel_DDC_impl::work(int noutput_items, gr_vector_const_void_star& input_items,
@@ -82,24 +82,10 @@ int Multi_Channel_DDC_impl::work(int noutput_items, gr_vector_const_void_star& i
     // auto out = static_cast<output_type*>(output_items[0]);
     input_type*  in[this->i_ch_n];
     output_type* out[this->i_ch_n];
-    for (uint8_t i = 0; i < this->i_ch_n; i++) {
-        in[i]  = (input_type*)(input_items[i]);
-        out[i] = (output_type*)(output_items[i]);
-        cudaMemcpyAsync((void*)out[i],
-                        (void*)in[i],
-                        sizeof(input_type*) * this->i_fft_num,
-                        cudaMemcpyDeviceToDevice,
-                        this->stream);
-        cudaStreamSynchronize(this->stream);
-    }
 
+    cudaMemcpyBatchAsync(
+        out, in, this->p_complex_size_vector, this->i_ch_n, 0, 0, 0, 0, this->stream);
 
-    // applyIn2Out(in,
-    // out,
-    // this->i_ch_n,
-    // this->i_min_grid_size_for_in2out,
-    // this->i_block_size_for_in2out,
-    // *this->stream);
     // #pragma message("Implement the signal processing in your block and remove this warning")
     // Do <+signal processing+>
 
