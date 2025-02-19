@@ -10,6 +10,7 @@ lib/CMakeFiles/gnuradio-cuda.dir/Multi_Channel_DDC_impl.cc.o
  /home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cuda_error.h
  /home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cufft.h
  /home/dayao/Projects/gpu/gr-cuda/lib/Multi_Channel_DDC_impl.h
+ /home/dayao/Projects/gpu/gr-cuda/lib/apply_window.cuh
  /home/dayao/Projects/gpu/gr-cuda/lib/cufft_impl.h
  /home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cuh
  /home/dayao/anaconda3/include/boost/any.hpp

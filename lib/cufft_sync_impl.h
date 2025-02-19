@@ -26,8 +26,8 @@ private:
     cudaStream_t   stream;
     cufftHandle    plan1d;
     cublasHandle_t cublas_handle;
-    int            i_min_grid_size;
-    int            i_block_size;
+    dim3           i_min_grid_size;
+    dim3           i_block_size;
     float*         win_coe = nullptr;
     cudaDeviceProp prop;
 

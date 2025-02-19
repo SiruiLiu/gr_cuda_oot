@@ -6,11 +6,15 @@
  */
 
 #include "Multi_Channel_DDC_impl.h"
+#include "apply_window.cuh"
 #include "cufft_impl.h"
 #include "gnuradio/cuda/Multi_Channel_DDC.h"
 #include "multi_ch.cuh"
 #include <cstddef>
 #include <cuda_runtime.h>
+#include <cuda_runtime_api.h>
+#include <cufft.h>
+#include <driver_types.h>
 #include <gnuradio/cuda/cuda_buffer.h>
 #include <gnuradio/cuda/cuda_error.h>
 #include <gnuradio/gr_complex.h>
@@ -19,9 +23,7 @@
 namespace gr {
 namespace cuda {
 
-// #pragma message("set the following appropriately and remove this warning")
-using input_type = gr_complex;
-// #pragma message("set the following appropriately and remove this warning")
+using input_type  = gr_complex;
 using output_type = gr_complex;
 Multi_Channel_DDC::sptr Multi_Channel_DDC::make(int channel_num, float sample_rate,
                                                 int vector_length)
@@ -29,7 +31,6 @@ Multi_Channel_DDC::sptr Multi_Channel_DDC::make(int channel_num, float sample_ra
     return gnuradio::make_block_sptr<Multi_Channel_DDC_impl>(
         channel_num, sample_rate, vector_length);
 }
-
 
 /*
  * The private constructor
@@ -45,21 +46,10 @@ Multi_Channel_DDC_impl::Multi_Channel_DDC_impl(int channel_num, float sample_rat
     , f_sr(sample_rate)
     , i_fft_num(vector_length)
 {
-    check_cuda_errors(cudaStreamCreate(&this->stream));
-    check_cuda_errors(
-        cudaMallocAsync((void**)&this->win_coe, sizeof(float) * this->i_fft_num, this->stream));
-    cufftResult_t r = cufftPlan1d(&this->plan1d, this->i_fft_num, CUFFT_C2C, 1);
-    if (r != CUFFT_SUCCESS) {
-        throw std::runtime_error("Failed to create fft plan");
-    }
-    cublasStatus_t status = cublasCreate(&this->cublas_handle);
-    if (status != CUBLAS_STATUS_SUCCESS) {
-        throw std::runtime_error("Failed to initialize CUBLAS");
-    }
-    r                           = cufftSetStream(this->plan1d, this->stream);
-    this->p_complex_size_vector = new size_t[this->i_ch_n];
-    memset(
-        this->p_complex_size_vector, (size_t)(sizeof(gr_complex) * this->i_fft_num), this->i_ch_n);
+    check_cuda_errors(cudaStreamCreate(&this->stream));   // Create cuda stream for further process
+    this->createFFTPlane();                               // Create multiple channel FFT plan.
+    this->allocateGPUSources();
+    this->genWinCoe();   // Generate window coefficients for FFT process.
 }
 
 /*
@@ -71,8 +61,6 @@ Multi_Channel_DDC_impl::~Multi_Channel_DDC_impl()
     cublasDestroy(cublas_handle);
     cudaStreamDestroy(this->stream);
     cudaFree(this->win_coe);
-    delete this->p_complex_size_vector;
-    this->p_complex_size_vector = nullptr;
 }
 
 int Multi_Channel_DDC_impl::work(int noutput_items, gr_vector_const_void_star& input_items,
@@ -83,40 +71,81 @@ int Multi_Channel_DDC_impl::work(int noutput_items, gr_vector_const_void_star& i
     input_type*  in[this->i_ch_n];
     output_type* out[this->i_ch_n];
 
-    cudaMemcpyBatchAsync(
-        out, in, this->p_complex_size_vector, this->i_ch_n, 0, 0, 0, 0, this->stream);
+    for (int i = 0; i < this->i_ch_n; i++) {
+        in[i]  = (input_type*)input_items[i];
+        out[i] = (output_type*)output_items[i];
+        applyWindow_multi_ch((cufftComplex*)in[i],
+                             this->p_fft_memory_block + i * this->i_fft_num,
+                             this->win_coe,
+                             this->i_fft_num,
+                             this->i_grid_size_for_win,
+                             this->i_block_size_for_win,
+                             this->stream);
+        cudaStreamSynchronize(this->stream);
+    }
+    cufftExecC2C(this->plan1d, this->p_fft_memory_block, this->p_fft_memory_block, CUFFT_FORWARD);
 
-    // #pragma message("Implement the signal processing in your block and remove this warning")
-    // Do <+signal processing+>
+    for (int i = 0; i < this->i_ch_n; i++) {
+        cudaMemcpyAsync(out[i],
+                        this->p_fft_memory_block + i * this->i_fft_num,
+                        sizeof(gr_complex) * this->i_fft_num,
+                        cudaMemcpyDeviceToDevice,
+                        this->stream);
+        cudaStreamSynchronize(this->stream);
+    }
 
-    // Tell runtime system how many output items we produced.
     return noutput_items;
+}
+
+void Multi_Channel_DDC_impl::createFFTPlane()
+{
+    cufftResult_t r = cufftPlan1d(&this->plan1d,
+                                  this->i_fft_num,
+                                  CUFFT_C2C,
+                                  this->i_ch_n);   // Create multiple channel FFT plan
+    if (r != CUFFT_SUCCESS) {
+        throw std::runtime_error("Failed to create fft plan");
+    }
+    r = cufftSetStream(this->plan1d, this->stream);
+    if (r != CUFFT_SUCCESS) {
+        throw std::runtime_error("Failed to set stream to fft plan");
+    }
+}
+
+void Multi_Channel_DDC_impl::genWinCoe()
+{
+    check_cuda_errors(cudaMallocAsync((void**)&this->win_coe,
+                                      sizeof(float) * this->i_fft_num,
+                                      this->stream));   // Allocate memory for windows coefficients
+    if (this->prop.maxThreadsPerBlock > this->i_fft_num) {
+        this->i_block_size_for_win = this->i_fft_num;
+    }
+    else {
+        this->i_block_size_for_win.x = this->prop.maxThreadsPerBlock;
+    }
+    this->i_grid_size_for_win.x =
+        ceil((this->i_fft_num + this->i_block_size_for_win.x - 1) / this->i_block_size_for_win.x);
+    std::cout << "i_block_size_for_win: " << i_block_size_for_win.x << std::endl;
+    std::cout << "i_grid_size_for_win: " << i_grid_size_for_win.x << std::endl;
+    genBlackmanWindow(this->i_fft_num,
+                      this->win_coe,
+                      this->i_grid_size_for_win,
+                      i_block_size_for_win,
+                      this->stream);
+    cudaStreamSynchronize(this->stream);
 }
 
 void Multi_Channel_DDC_impl::allocateGPUSources()
 {
     cudaGetDeviceProperties(&(this->prop), 0);
     this->allocateGPUSourcesforFFT();
-    this->allocateGPUSourcesforIn2Out();
 }
-void Multi_Channel_DDC_impl::allocateGPUSourcesforIn2Out()
-{
-    if (this->prop.maxThreadsPerMultiProcessor > this->i_ch_n) {
-        this->i_min_grid_size_for_in2out = 1;
-        this->i_block_size_for_in2out    = 1;
-    }
-    else {
-        this->i_min_grid_size_for_in2out =
-            ceil((this->i_ch_n + this->prop.maxThreadsPerMultiProcessor - 1) /
-                 this->prop.maxThreadsPerMultiProcessor);
-        this->i_block_size_for_in2out = this->prop.maxThreadsPerMultiProcessor;
-    }
-}
+
 void Multi_Channel_DDC_impl::allocateGPUSourcesforFFT()
 {
-    this->i_block_size_for_fft = this->prop.maxBlocksPerMultiProcessor;
-    this->i_min_grid_size_for_fft =
-        ceil((this->i_fft_num + this->i_block_size_for_fft - 1) / this->i_block_size_for_fft);
+    check_cuda_errors(cudaMallocAsync(&this->p_fft_memory_block,
+                                      sizeof(gr_complex) * this->i_fft_num * this->i_ch_n,
+                                      this->stream));
 }
 
 } /* namespace cuda */

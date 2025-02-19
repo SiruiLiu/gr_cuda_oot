@@ -2618,6 +2618,7 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o
  /usr/include/linux/types.h
  /usr/include/locale.h
  /usr/include/math.h
+ /usr/include/memory.h
  /usr/include/pmt/api.h
  /usr/include/pmt/pmt.h
  /usr/include/pmt/pmt_sugar.h
@@ -2832,10 +2833,15 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o
  /usr/local/cuda/include/crt/sm_80_rt.hpp
  /usr/local/cuda/include/crt/sm_90_rt.h
  /usr/local/cuda/include/crt/sm_90_rt.hpp
+ /usr/local/cuda/include/cuComplex.h
  /usr/local/cuda/include/cuda.h
  /usr/local/cuda/include/cuda_device_runtime_api.h
  /usr/local/cuda/include/cuda_runtime.h
  /usr/local/cuda/include/cuda_runtime_api.h
+ /usr/local/cuda/include/cufft.h
+ /usr/local/cuda/include/curand.h
+ /usr/local/cuda/include/curand_mtgp32.h
+ /usr/local/cuda/include/curand_mtgp32_kernel.h
  /usr/local/cuda/include/device_atomic_functions.h
  /usr/local/cuda/include/device_atomic_functions.hpp
  /usr/local/cuda/include/device_launch_parameters.h
@@ -2843,6 +2849,9 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o
  /usr/local/cuda/include/driver_functions.h
  /usr/local/cuda/include/driver_types.h
  /usr/local/cuda/include/library_types.h
+ /usr/local/cuda/include/nv/detail/__preprocessor
+ /usr/local/cuda/include/nv/detail/__target_macros
+ /usr/local/cuda/include/nv/target
  /usr/local/cuda/include/sm_20_atomic_functions.h
  /usr/local/cuda/include/sm_20_atomic_functions.hpp
  /usr/local/cuda/include/sm_20_intrinsics.h

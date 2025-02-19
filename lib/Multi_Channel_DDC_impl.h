@@ -29,13 +29,15 @@ private:
     cudaStream_t   stream;
     cufftHandle    plan1d;
     cublasHandle_t cublas_handle;
+    dim3           i_block_size_for_win;
+    dim3           i_grid_size_for_win;
     int            i_min_grid_size_for_fft;
     int            i_block_size_for_fft;
     int            i_min_grid_size_for_in2out;
     int            i_block_size_for_in2out;
     float*         win_coe = nullptr;
     cudaDeviceProp prop;
-    size_t*        p_complex_size_vector = nullptr;
+    cufftComplex*  p_fft_memory_block = nullptr;
 
 public:
     Multi_Channel_DDC_impl(int channel_num, float sample_rate, int vector_length);
@@ -44,6 +46,8 @@ public:
     // Where all the action really happens
     int  work(int noutput_items, gr_vector_const_void_star& input_items,
               gr_vector_void_star& output_items);
+    void createFFTPlane();
+    void genWinCoe();
     void allocateGPUSources();
     void allocateGPUSourcesforIn2Out();
     void allocateGPUSourcesforFFT();

@@ -36,40 +36,23 @@ __global__ void kernelApplyWindow(int win_width, float* coe, cuComplex* out){
     }
 }
 
-void genHammingWindow(int win_width, float* out, int grid_size, int block_size, cudaStream_t stream){
+void genHammingWindow(int win_width, float* out, dim3 grid_size, dim3 block_size, cudaStream_t stream){
+    printf("Block size x: %d, y: %d, z: %d\r\n", block_size.x, block_size.y, block_size.z);
     kernelHammingWindow<<<grid_size, block_size, 0, stream>>>(win_width, out);
     check_cuda_errors(cudaGetLastError());
 }
 
-void genHanningWindow(int win_width, float* out, int grid_size, int block_size, cudaStream_t stream){
+void genHanningWindow(int win_width, float* out, dim3 grid_size, dim3 block_size, cudaStream_t stream){
     kernelHanningWindow<<<grid_size, block_size, 0, stream>>>(win_width, out);
     check_cuda_errors(cudaGetLastError());
 }
 
-void genBlackmanWindow(int win_width, float* out, int grid_size, int block_size, cudaStream_t stream){
+void genBlackmanWindow(int win_width, float* out, dim3 grid_size, dim3 block_size, cudaStream_t stream){
     kernelBlackmanWindow<<<grid_size, block_size, 0, stream>>>(win_width, out);
     check_cuda_errors(cudaGetLastError());
 }
 
-void ApplayWindow(int win_width, float* coe, cuComplex* out, int grid_size, int block_size, cudaStream_t stream){
+void ApplyWindow(int win_width, float* coe, cuComplex* out, dim3 grid_size, dim3 block_size, cudaStream_t stream){
     kernelApplyWindow<<<grid_size, block_size, 0, stream>>>(win_width, coe, out);
     check_cuda_errors(cudaGetLastError());
-}
-
-void get_block_and_grid(const std::string& win_type, int* minGrid_win, int* minBlock_win, int* minGrid_apply, int* minBlock_apply)
-{
-    if(win_type == "Hamming"){
-        check_cuda_errors(cudaOccupancyMaxPotentialBlockSize(
-            minGrid_win, minBlock_win, genHammingWindow, 0, 0));
-    }
-    else if(win_type == "Hanning"){
-        check_cuda_errors(cudaOccupancyMaxPotentialBlockSize(
-            minGrid_win, minBlock_win, genHanningWindow, 0, 0));
-    }
-    else if(win_type == "Blackman"){
-        check_cuda_errors(cudaOccupancyMaxPotentialBlockSize(
-            minGrid_win, minBlock_win, genBlackmanWindow, 0, 0));
-    }
-    check_cuda_errors(cudaOccupancyMaxPotentialBlockSize(
-        minGrid_apply, minBlock_apply, ApplayWindow, 0, 0));
 }

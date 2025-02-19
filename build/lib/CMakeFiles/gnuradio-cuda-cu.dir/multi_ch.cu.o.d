@@ -298,6 +298,8 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o : /home/dayao/Projects/gpu/gr-
     /usr/include/stdint.h \
     /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
     /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+    /usr/local/cuda/include/cufft.h \
+    /usr/local/cuda/include/cuComplex.h \
     /usr/include/gnuradio/io_signature.h \
     /usr/include/spdlog/tweakme.h \
     /usr/include/gnuradio/api.h \
@@ -1214,4 +1216,11 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o : /home/dayao/Projects/gpu/gr-
     /usr/include/gnuradio/messages/msg_accepter.h \
     /usr/include/gnuradio/transfer_type.h \
     /usr/include/c++/13/iostream \
-    /home/dayao/Projects/gpu/gr-cuda/lib/../include/gnuradio/cuda/cuda_error.h
+    /home/dayao/Projects/gpu/gr-cuda/lib/../include/gnuradio/cuda/cuda_error.h \
+    /usr/local/cuda/include/curand_mtgp32_kernel.h \
+    /usr/include/memory.h \
+    /usr/local/cuda/include/nv/target \
+    /usr/local/cuda/include/nv/detail/__target_macros \
+    /usr/local/cuda/include/nv/detail/__preprocessor \
+    /usr/local/cuda/include/curand.h \
+    /usr/local/cuda/include/curand_mtgp32.h

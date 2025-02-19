@@ -43,8 +43,9 @@ cufft_impl::cufft_impl(int fft_num, const std::string& len_key, bool forward, st
     , s_win_type(win_type)
 {
     cudaGetDeviceProperties(&(this->prop), 0);
-    this->i_block_size    = this->prop.maxBlocksPerMultiProcessor;
-    this->i_min_grid_size = ceil((this->i_fft_num + this->i_block_size - 1) / this->i_block_size);
+    this->i_block_size.x = this->prop.maxThreadsPerBlock;
+    this->i_min_grid_size =
+        ceil((this->i_fft_num + this->i_block_size.x - 1) / this->i_block_size.x);
     check_cuda_errors(cudaStreamCreate(&this->stream));
     check_cuda_errors(
         cudaMallocAsync((void**)&this->win_coe, sizeof(float) * this->i_fft_num, this->stream));
@@ -117,12 +118,12 @@ int cufft_impl::work(int noutput_items, gr_vector_int& ninput_items,
 
     if (this->b_forward) {
         if (this->s_win_type != "Rectangle") {
-            ApplayWindow(this->i_fft_num,
-                         this->win_coe,
-                         (cuComplex*)in,
-                         this->i_min_grid_size,
-                         this->i_block_size,
-                         this->stream);
+            ApplyWindow(this->i_fft_num,
+                        this->win_coe,
+                        (cuComplex*)in,
+                        this->i_min_grid_size,
+                        this->i_block_size,
+                        this->stream);
         }
         cufftExecC2C(this->plan1d, (cufftComplex*)in, (cufftComplex*)out, CUFFT_FORWARD);
         float scale = 1.0f / this->i_fft_num;

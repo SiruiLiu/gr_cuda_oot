@@ -2,17 +2,19 @@
 #include <gnuradio/gr_complex.h>
 #include <gnuradio/cuda/cuda_error.h>
 #include <gnuradio/io_signature.h>
+#include <cufft.h>
+#include <curand_mtgp32_kernel.h>
 
-__global__ void kernelIn2Out(gr_complex** input, gr_complex** output, int ch_num, int vector_length){
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if(idx < ch_num){
-        output[idx] = input[idx];
+__global__ void kernelApplyWindow(cufftComplex* input, cufftComplex* output, float* win_coe, int vector_length){
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    if(i < vector_length){
+        output[i].x = input[i].x*win_coe[i];
+        output[i].y = input[i].y*win_coe[i];
     }
 }
 
-
-void applyIn2Out(gr_complex** input, gr_complex** output, int ch_num, int vector_length,
-                int grid_size, int block_size, cudaStream_t stream){
-    kernelIn2Out<<<grid_size, block_size, 0, stream>>>(input, output, ch_num, vector_length);
+void applyWindow_multi_ch(cufftComplex* input, cufftComplex* output, float* win_coe, int vector_length,
+                 dim3 grid_size, dim3 block_size, cudaStream_t stream){
+    kernelApplyWindow<<<grid_size, block_size, 0, stream>>>(input, output, win_coe, vector_length);
     check_cuda_errors(cudaGetLastError());
 }

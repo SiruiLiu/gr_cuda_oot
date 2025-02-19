@@ -2614,6 +2614,7 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o: /home/dayao/Projects/gpu/gr-c
   /usr/include/linux/types.h \
   /usr/include/locale.h \
   /usr/include/math.h \
+  /usr/include/memory.h \
   /usr/include/pmt/api.h \
   /usr/include/pmt/pmt.h \
   /usr/include/pmt/pmt_sugar.h \
@@ -2828,10 +2829,15 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o: /home/dayao/Projects/gpu/gr-c
   /usr/local/cuda/include/crt/sm_80_rt.hpp \
   /usr/local/cuda/include/crt/sm_90_rt.h \
   /usr/local/cuda/include/crt/sm_90_rt.hpp \
+  /usr/local/cuda/include/cuComplex.h \
   /usr/local/cuda/include/cuda.h \
   /usr/local/cuda/include/cuda_device_runtime_api.h \
   /usr/local/cuda/include/cuda_runtime.h \
   /usr/local/cuda/include/cuda_runtime_api.h \
+  /usr/local/cuda/include/cufft.h \
+  /usr/local/cuda/include/curand.h \
+  /usr/local/cuda/include/curand_mtgp32.h \
+  /usr/local/cuda/include/curand_mtgp32_kernel.h \
   /usr/local/cuda/include/device_atomic_functions.h \
   /usr/local/cuda/include/device_atomic_functions.hpp \
   /usr/local/cuda/include/device_launch_parameters.h \
@@ -2839,6 +2845,9 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o: /home/dayao/Projects/gpu/gr-c
   /usr/local/cuda/include/driver_functions.h \
   /usr/local/cuda/include/driver_types.h \
   /usr/local/cuda/include/library_types.h \
+  /usr/local/cuda/include/nv/detail/__preprocessor \
+  /usr/local/cuda/include/nv/detail/__target_macros \
+  /usr/local/cuda/include/nv/target \
   /usr/local/cuda/include/sm_20_atomic_functions.h \
   /usr/local/cuda/include/sm_20_atomic_functions.hpp \
   /usr/local/cuda/include/sm_20_intrinsics.h \
@@ -3609,8 +3618,6 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o: /home/dayao/Projects/gp
 
 /usr/local/cuda/include/thrust/complex.h:
 
-/usr/local/cuda/include/nv/target:
-
 /usr/local/cuda/include/thrust/detail/complex/catrigf.h:
 
 /usr/local/cuda/include/cuda_fp16.h:
@@ -3825,10 +3832,6 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o: /home/dayao/Projects/gp
 
 /usr/local/cuda/include/cuda/std/__new/bad_alloc.h:
 
-/usr/local/cuda/include/nv/detail/__preprocessor:
-
-/usr/local/cuda/include/cuda/std/__new/allocate.h:
-
 /usr/local/cuda/include/cuda/std/__memory/uses_allocator.h:
 
 /usr/local/cuda/include/cuda/std/__memory/construct_at.h:
@@ -4005,6 +4008,16 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o: /home/dayao/Projects/gp
 
 /home/dayao/Projects/gpu/gr-cuda/lib/multiply_const.cu:
 
+/usr/local/cuda/include/nv/target:
+
+/usr/local/cuda/include/cuda/std/__new/allocate.h:
+
+/usr/local/cuda/include/nv/detail/__preprocessor:
+
+/usr/local/cuda/include/curand.h:
+
+/usr/local/cuda/include/cufft.h:
+
 /home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cuh:
 
 /home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cu:
@@ -4050,6 +4063,8 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o: /home/dayao/Projects/gp
 /usr/local/cuda/include/cuda_device_runtime_api.h:
 
 /usr/local/cuda/include/thrust/type_traits/is_contiguous_iterator.h:
+
+/usr/local/cuda/include/curand_mtgp32_kernel.h:
 
 /usr/local/cuda/include/crt/sm_80_rt.hpp:
 
@@ -4505,6 +4520,8 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o: /home/dayao/Projects/gp
 
 /usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
 
+/usr/local/cuda/include/curand_mtgp32.h:
+
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp:
@@ -4882,6 +4899,8 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o: /home/dayao/Projects/gp
 /usr/local/cuda/include/cuda/std/__type_traits/is_unsigned.h:
 
 /usr/include/boost/date_time/posix_time/conversion.hpp:
+
+/usr/include/memory.h:
 
 /usr/local/cuda/include/device_types.h:
 
@@ -6649,9 +6668,9 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o: /home/dayao/Projects/gp
 
 /usr/include/x86_64-linux-gnu/bits/fcntl.h:
 
-/usr/local/cuda/include/nv/detail/__target_macros:
-
 /usr/local/cuda/include/cuda/std/__type_traits/remove_cv.h:
+
+/usr/local/cuda/include/nv/detail/__target_macros:
 
 /usr/local/cuda/include/crt/sm_70_rt.hpp:
 
