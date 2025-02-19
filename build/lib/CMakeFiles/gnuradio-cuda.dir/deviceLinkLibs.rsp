@@ -1,0 +1,1 @@
+  -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs"  -L"/usr/local/cuda/targets/x86_64-linux/lib"   "libgnuradio-cuda-cu.a" -ldl -lm -lrt -lcudadevrt -lcudart_static -lpthread 

@@ -1,0 +1,247 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "include/gnuradio/cuda",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-include.gnuradio.cuda-Release-d310ffce50037c87bb11.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "include/gnuradio/cuda"
+				},
+				{
+					"build" : "lib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib-Release-a1b7e5cd2480443be3ca.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "apps",
+					"jsonFile" : "directory-apps-Release-76fddd1453400e648719.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "apps",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "docs",
+					"jsonFile" : "directory-docs-Release-c463161ff6ebad611835.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "docs"
+				},
+				{
+					"build" : "python/cuda",
+					"childIndexes" : 
+					[
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-python.cuda-Release-8fb6a96c0db8f767dfd1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "python/cuda",
+					"targetIndexes" : 
+					[
+						1,
+						7
+					]
+				},
+				{
+					"build" : "python/cuda/bindings",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-python.cuda.bindings-Release-6e715b3e59b977389394.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "python/cuda/bindings",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						3
+					]
+				},
+				{
+					"build" : "grc",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-grc-Release-8b148d4bd238667b0051.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "grc"
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"name" : "gr-cuda",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 6,
+					"id" : "copy_bindings_for_tests::@651d25b80962de92124e",
+					"jsonFile" : "target-copy_bindings_for_tests-Release-130947fe674897f4dbda.json",
+					"name" : "copy_bindings_for_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "copy_module_for_tests::@f0e8b820d2d0bd0047a6",
+					"jsonFile" : "target-copy_module_for_tests-Release-f810d0e6b465fc5ca3ca.json",
+					"name" : "copy_module_for_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "cuda_docstrings::@651d25b80962de92124e",
+					"jsonFile" : "target-cuda_docstrings-Release-40aef2ca15718887ed72.json",
+					"name" : "cuda_docstrings",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "cuda_python::@651d25b80962de92124e",
+					"jsonFile" : "target-cuda_python-Release-15cd66534c20ffa5301a.json",
+					"name" : "cuda_python",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gnuradio-cuda::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-gnuradio-cuda-Release-7f94ee70b3ac58ee1eef.json",
+					"name" : "gnuradio-cuda",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "gnuradio-cuda-cu::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-gnuradio-cuda-cu-Release-a68cf1175315ad8921ed.json",
+					"name" : "gnuradio-cuda-cu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "pygen_apps_9a6dd283c3de653fbca500f9721f634f::@9e189ee61a034fc9b705",
+					"jsonFile" : "target-pygen_apps_9a6dd283c3de653fbca500f9721f634f-Release-29862537099b1bec0c21.json",
+					"name" : "pygen_apps_9a6dd283c3de653fbca500f9721f634f",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971::@f0e8b820d2d0bd0047a6",
+					"jsonFile" : "target-pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971-Release-eb3aed8fd9f122c70211.json",
+					"name" : "pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-37b14c5ab954c0a56e18.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dayao/Projects/gpu/gr-cuda/build",
+		"source" : "/home/dayao/Projects/gpu/gr-cuda"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

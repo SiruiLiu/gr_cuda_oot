@@ -1,0 +1,49 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"grc/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "share/gnuradio/grc/blocks",
+			"paths" : 
+			[
+				"grc/cuda.domain.yml",
+				"grc/cuda_copy.block.yml",
+				"grc/cuda_multiply_const_xx.block.yml",
+				"grc/cuda_load.block.yml",
+				"grc/cuda_cufft.block.yml",
+				"grc/cuda_Multi_Channel_DDC.block.yml",
+				"grc/cuda_cufft_sync.block.yml"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "grc",
+		"source" : "grc"
+	}
+}

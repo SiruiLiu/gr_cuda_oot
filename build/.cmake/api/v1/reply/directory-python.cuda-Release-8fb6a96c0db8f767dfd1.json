@@ -1,0 +1,68 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"GR_PYTHON_INSTALL"
+		],
+		"files" : 
+		[
+			"/usr/lib/x86_64-linux-gnu/cmake/gnuradio/GrPython.cmake",
+			"python/cuda/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 211,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 266,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/python3.12/dist-packages/gnuradio/cuda",
+			"paths" : 
+			[
+				"python/cuda/__init__.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/python3.12/dist-packages/gnuradio/cuda",
+			"paths" : 
+			[
+				"build/python/cuda/__init__.pyc",
+				"build/python/cuda/__init__.pyo"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "python/cuda",
+		"source" : "python/cuda"
+	}
+}

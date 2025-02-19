@@ -1,0 +1,574 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/libgnuradio-cuda.so"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"GR_LIBRARY_FOO",
+			"target_link_libraries",
+			"set_target_properties",
+			"include",
+			"find_package",
+			"find_dependency",
+			"set_property",
+			"boost_find_component",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"lib/CMakeLists.txt",
+			"/usr/lib/x86_64-linux-gnu/cmake/gnuradio/GrMiscUtils.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/gnuradio/gnuradio-runtimeTargets.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/gnuradio/gnuradio-runtimeConfig.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/gnuradio/GnuradioConfig.cmake",
+			"CMakeLists.txt",
+			"/usr/lib/x86_64-linux-gnu/cmake/volk/VolkTargets.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/volk/VolkConfig.cmake",
+			"/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.83.0/boost_thread-config.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake",
+			"/usr/share/cmake-3.28/Modules/FindBoost.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigTargets.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfig.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/gnuradio/FindMPLIB.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 52,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 63,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 53,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 59,
+				"parent" : 0
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 80,
+				"parent" : 6
+			},
+			{
+				"file" : 4,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 41,
+				"parent" : 8
+			},
+			{
+				"file" : 3,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 14,
+				"parent" : 10
+			},
+			{
+				"file" : 2,
+				"parent" : 11
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 71,
+				"parent" : 12
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 31,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 8,
+				"line" : 76,
+				"parent" : 14
+			},
+			{
+				"file" : 7,
+				"parent" : 15
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 11,
+				"parent" : 16
+			},
+			{
+				"file" : 6,
+				"parent" : 17
+			},
+			{
+				"command" : 4,
+				"file" : 6,
+				"line" : 71,
+				"parent" : 18
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 28,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 8,
+				"line" : 76,
+				"parent" : 20
+			},
+			{
+				"file" : 11,
+				"parent" : 21
+			},
+			{
+				"command" : 6,
+				"file" : 11,
+				"line" : 594,
+				"parent" : 22
+			},
+			{
+				"file" : 10,
+				"parent" : 23
+			},
+			{
+				"command" : 9,
+				"file" : 10,
+				"line" : 262,
+				"parent" : 24
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 141,
+				"parent" : 25
+			},
+			{
+				"file" : 9,
+				"parent" : 26
+			},
+			{
+				"command" : 8,
+				"file" : 9,
+				"line" : 103,
+				"parent" : 27
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 13,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 8,
+				"line" : 76,
+				"parent" : 29
+			},
+			{
+				"file" : 13,
+				"parent" : 30
+			},
+			{
+				"command" : 5,
+				"file" : 13,
+				"line" : 52,
+				"parent" : 31
+			},
+			{
+				"file" : 12,
+				"parent" : 32
+			},
+			{
+				"command" : 4,
+				"file" : 12,
+				"line" : 71,
+				"parent" : 33
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 14,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 8,
+				"line" : 76,
+				"parent" : 35
+			},
+			{
+				"file" : 14,
+				"parent" : 36
+			},
+			{
+				"command" : 4,
+				"file" : 14,
+				"line" : 37,
+				"parent" : 37
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 63,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "BOOST_ATOMIC_DYN_LINK"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "BOOST_ATOMIC_NO_LIB"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "BOOST_THREAD_DYN_LINK"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "BOOST_THREAD_NO_LIB"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "FMT_SHARED"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "GR_CTRLPORT"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "GR_MPLIB_GMP"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "GR_PERFORMANCE_COUNTERS"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "SPDLOG_COMPILED_LIB"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "SPDLOG_FMT_EXTERNAL"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "SPDLOG_SHARED_LIB"
+				},
+				{
+					"define" : "gnuradio_cuda_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 39,
+					"path" : "/home/dayao/Projects/gpu/gr-cuda/lib/../include"
+				},
+				{
+					"backtrace" : 39,
+					"path" : "/usr/local/cuda/include"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/home/dayao/anaconda3/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					4,
+					4
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "gnuradio-cuda-cu::@306ed2d68c6501e8728f"
+		}
+	],
+	"id" : "gnuradio-cuda::@306ed2d68c6501e8728f",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "lib/x86_64-linux-gnu"
+			},
+			{
+				"backtrace" : 3,
+				"path" : "lib/x86_64-linux-gnu"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-L/usr/local/cuda/targets/x86_64-linux/lib/stubs",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-L/usr/local/cuda/targets/x86_64-linux/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/usr/local/cuda/lib64:/usr/local/cuda-12.8/lib64:/home/dayao/anaconda3/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libgnuradio-runtime.so.3.10.9.2",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/local/cuda/lib64/libcudart.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/local/cuda/lib64/libcublas.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "/usr/local/cuda-12.8/lib64/libcufft.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "libgnuradio-cuda-cu.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libgnuradio-pmt.so.3.10.9.2",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libvolk.so.3.1.2",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.83.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 28,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.83.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libspdlog.so.1.12.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 34,
+				"fragment" : "/home/dayao/anaconda3/lib/libfmt.so.9.1.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 38,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libgmpxx.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 38,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libgmp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lcudadevrt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lcudart_static",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "gnuradio-cuda",
+	"nameOnDisk" : "libgnuradio-cuda.so",
+	"paths" : 
+	{
+		"build" : "lib",
+		"source" : "lib"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/cuda_buffer.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/copy_impl.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/multiply_const_impl.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/load_impl.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/cufft_impl.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Multi_Channel_DDC_impl.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/cufft_sync_impl.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

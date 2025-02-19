@@ -1,0 +1,47 @@
+# Copyright 2018 Free Software Foundation, Inc.
+#
+# This file is part of GNU Radio
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
+if(NOT PKG_CONFIG_FOUND)
+    INCLUDE(FindPkgConfig)
+endif()
+PKG_CHECK_MODULES(PC_gnuradio-cuda gnuradio-cuda)
+
+FIND_PATH(
+    gnuradio-cuda_INCLUDE_DIRS
+    NAMES gnuradio/cuda/api.h
+    HINTS $ENV{gnuradio-cuda_DIR}/include
+        ${PC_gnuradio-cuda_INCLUDEDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/include
+          /usr/local/include
+          /usr/include
+)
+
+FIND_LIBRARY(
+    gnuradio-cuda_LIBRARIES
+    NAMES gnuradio-cuda
+    HINTS $ENV{gnuradio-cuda_DIR}/lib
+        ${PC_gnuradio-cuda_LIBDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/lib
+          ${CMAKE_INSTALL_PREFIX}/lib64
+          /usr/local/lib
+          /usr/local/lib64
+          /usr/lib
+          /usr/lib64
+          )
+
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(gnuradio-cuda DEFAULT_MSG gnuradio-cuda_LIBRARIES gnuradio-cuda_INCLUDE_DIRS)
+MARK_AS_ADVANCED(gnuradio-cuda_LIBRARIES gnuradio-cuda_INCLUDE_DIRS)
+
+
+include(CMakeFindDependencyMacro)
+
+set(target_deps "")
+foreach(dep IN LISTS target_deps)
+    find_dependency(${dep})
+endforeach()
+include("${CMAKE_CURRENT_LIST_DIR}/gnuradio-cudaTargets.cmake")

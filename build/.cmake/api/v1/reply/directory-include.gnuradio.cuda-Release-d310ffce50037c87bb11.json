@@ -1,0 +1,52 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"include/gnuradio/cuda/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/gnuradio/cuda",
+			"paths" : 
+			[
+				"include/gnuradio/cuda/api.h",
+				"include/gnuradio/cuda/cuda_error.h",
+				"include/gnuradio/cuda/cuda_buffer.h",
+				"include/gnuradio/cuda/cuda_block.h",
+				"include/gnuradio/cuda/copy.h",
+				"include/gnuradio/cuda/multiply_const.h",
+				"include/gnuradio/cuda/load.h",
+				"include/gnuradio/cuda/cufft.h",
+				"include/gnuradio/cuda/Multi_Channel_DDC.h",
+				"include/gnuradio/cuda/cufft_sync.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "include/gnuradio/cuda",
+		"source" : "include/gnuradio/cuda"
+	}
+}

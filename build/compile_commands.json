@@ -1,0 +1,116 @@
+[
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/bin/c++  -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/gnuradio-cuda-cu.dir/cuda_error.cc.o -c /home/dayao/Projects/gpu/gr-cuda/lib/cuda_error.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/cuda_error.cc",
+  "output": "lib/CMakeFiles/gnuradio-cuda-cu.dir/cuda_error.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  --options-file CMakeFiles/gnuradio-cuda-cu.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_60,code=[compute_60,sm_60]\" \"--generate-code=arch=compute_61,code=[compute_61,sm_61]\" \"--generate-code=arch=compute_62,code=[compute_62,sm_62]\" \"--generate-code=arch=compute_70,code=[compute_70,sm_70]\" \"--generate-code=arch=compute_72,code=[compute_72,sm_72]\" \"--generate-code=arch=compute_75,code=[compute_75,sm_75]\" -Xcompiler=-fPIC -Xcompiler=-fvisibility=hidden -x cu -rdc=true -c /home/dayao/Projects/gpu/gr-cuda/lib/multiply_const.cu -o CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/multiply_const.cu",
+  "output": "lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  --options-file CMakeFiles/gnuradio-cuda-cu.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_60,code=[compute_60,sm_60]\" \"--generate-code=arch=compute_61,code=[compute_61,sm_61]\" \"--generate-code=arch=compute_62,code=[compute_62,sm_62]\" \"--generate-code=arch=compute_70,code=[compute_70,sm_70]\" \"--generate-code=arch=compute_72,code=[compute_72,sm_72]\" \"--generate-code=arch=compute_75,code=[compute_75,sm_75]\" -Xcompiler=-fPIC -Xcompiler=-fvisibility=hidden -x cu -rdc=true -c /home/dayao/Projects/gpu/gr-cuda/lib/load.cu -o CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/load.cu",
+  "output": "lib/CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  --options-file CMakeFiles/gnuradio-cuda-cu.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_60,code=[compute_60,sm_60]\" \"--generate-code=arch=compute_61,code=[compute_61,sm_61]\" \"--generate-code=arch=compute_62,code=[compute_62,sm_62]\" \"--generate-code=arch=compute_70,code=[compute_70,sm_70]\" \"--generate-code=arch=compute_72,code=[compute_72,sm_72]\" \"--generate-code=arch=compute_75,code=[compute_75,sm_75]\" -Xcompiler=-fPIC -Xcompiler=-fvisibility=hidden -x cu -rdc=true -c /home/dayao/Projects/gpu/gr-cuda/lib/apply_window.cu -o CMakeFiles/gnuradio-cuda-cu.dir/apply_window.cu.o",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/apply_window.cu",
+  "output": "lib/CMakeFiles/gnuradio-cuda-cu.dir/apply_window.cu.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  --options-file CMakeFiles/gnuradio-cuda-cu.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_60,code=[compute_60,sm_60]\" \"--generate-code=arch=compute_61,code=[compute_61,sm_61]\" \"--generate-code=arch=compute_62,code=[compute_62,sm_62]\" \"--generate-code=arch=compute_70,code=[compute_70,sm_70]\" \"--generate-code=arch=compute_72,code=[compute_72,sm_72]\" \"--generate-code=arch=compute_75,code=[compute_75,sm_75]\" -Xcompiler=-fPIC -Xcompiler=-fvisibility=hidden -x cu -rdc=true -c /home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cu -o CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cu",
+  "output": "lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_cuda_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/gnuradio-cuda.dir/cuda_buffer.cc.o -c /home/dayao/Projects/gpu/gr-cuda/lib/cuda_buffer.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/cuda_buffer.cc",
+  "output": "lib/CMakeFiles/gnuradio-cuda.dir/cuda_buffer.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_cuda_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/gnuradio-cuda.dir/copy_impl.cc.o -c /home/dayao/Projects/gpu/gr-cuda/lib/copy_impl.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/copy_impl.cc",
+  "output": "lib/CMakeFiles/gnuradio-cuda.dir/copy_impl.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_cuda_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o -c /home/dayao/Projects/gpu/gr-cuda/lib/multiply_const_impl.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/multiply_const_impl.cc",
+  "output": "lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_cuda_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/gnuradio-cuda.dir/load_impl.cc.o -c /home/dayao/Projects/gpu/gr-cuda/lib/load_impl.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/load_impl.cc",
+  "output": "lib/CMakeFiles/gnuradio-cuda.dir/load_impl.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_cuda_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/gnuradio-cuda.dir/cufft_impl.cc.o -c /home/dayao/Projects/gpu/gr-cuda/lib/cufft_impl.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/cufft_impl.cc",
+  "output": "lib/CMakeFiles/gnuradio-cuda.dir/cufft_impl.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_cuda_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/gnuradio-cuda.dir/Multi_Channel_DDC_impl.cc.o -c /home/dayao/Projects/gpu/gr-cuda/lib/Multi_Channel_DDC_impl.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/Multi_Channel_DDC_impl.cc",
+  "output": "lib/CMakeFiles/gnuradio-cuda.dir/Multi_Channel_DDC_impl.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/lib",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_cuda_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/gnuradio-cuda.dir/cufft_sync_impl.cc.o -c /home/dayao/Projects/gpu/gr-cuda/lib/cufft_sync_impl.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/lib/cufft_sync_impl.cc",
+  "output": "lib/CMakeFiles/gnuradio-cuda.dir/cufft_sync_impl.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dcuda_python_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../lib -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../include -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/cuda_python.dir/copy_python.cc.o -c /home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/copy_python.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/copy_python.cc",
+  "output": "python/cuda/bindings/CMakeFiles/cuda_python.dir/copy_python.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dcuda_python_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../lib -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../include -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/cuda_python.dir/multiply_const_python.cc.o -c /home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/multiply_const_python.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/multiply_const_python.cc",
+  "output": "python/cuda/bindings/CMakeFiles/cuda_python.dir/multiply_const_python.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dcuda_python_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../lib -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../include -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/cuda_python.dir/load_python.cc.o -c /home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/load_python.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/load_python.cc",
+  "output": "python/cuda/bindings/CMakeFiles/cuda_python.dir/load_python.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dcuda_python_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../lib -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../include -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/cuda_python.dir/cufft_python.cc.o -c /home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/cufft_python.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/cufft_python.cc",
+  "output": "python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_python.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dcuda_python_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../lib -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../include -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/cuda_python.dir/Multi_Channel_DDC_python.cc.o -c /home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/Multi_Channel_DDC_python.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/Multi_Channel_DDC_python.cc",
+  "output": "python/cuda/bindings/CMakeFiles/cuda_python.dir/Multi_Channel_DDC_python.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dcuda_python_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../lib -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../include -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/cuda_python.dir/cufft_sync_python.cc.o -c /home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/cufft_sync_python.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/cufft_sync_python.cc",
+  "output": "python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_sync_python.cc.o"
+},
+{
+  "directory": "/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings",
+  "command": "/usr/bin/c++ -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_DATE_TIME_DYN_LINK -DBOOST_DATE_TIME_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dcuda_python_EXPORTS -I/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../lib -I/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/../../../include -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /usr/include/python3.12 -isystem /usr/lib/python3/dist-packages/numpy/core/include -isystem /home/dayao/anaconda3/include -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -Wno-unused-variable -flto -fno-fat-lto-objects -o CMakeFiles/cuda_python.dir/python_bindings.cc.o -c /home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/python_bindings.cc",
+  "file": "/home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/python_bindings.cc",
+  "output": "python/cuda/bindings/CMakeFiles/cuda_python.dir/python_bindings.cc.o"
+}
+]

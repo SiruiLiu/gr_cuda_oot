@@ -1,0 +1,56 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"python/cuda/bindings/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 52,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "pythonapi",
+			"destination" : "lib/python3.12/dist-packages/gnuradio/cuda",
+			"paths" : 
+			[
+				"python/cuda/bindings/cuda_python.cpython-312-x86_64-linux-gnu.so"
+			],
+			"targetId" : "cuda_python::@651d25b80962de92124e",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "pythonapi",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "cuda_python::@651d25b80962de92124e",
+				"index" : 3
+			},
+			"destination" : "lib/python3.12/dist-packages/gnuradio/cuda",
+			"type" : "cxxModuleBmi"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "python/cuda/bindings",
+		"source" : "python/cuda/bindings"
+	}
+}
