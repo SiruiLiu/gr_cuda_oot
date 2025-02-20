@@ -217,14 +217,12 @@ void Multi_Channel_DDC_impl::cuEstimates()
               this->i_block_size_for_ssum,
               this->stream);
     cudaStreamSynchronize(this->stream);
-    this->Display(this->p_square_sum, this->i_ch_n);
-    sleep(2);
-    // Log10(this->p_fft_memory_block,
-    //       this->p_fft_memory_block,
-    //       i_ch_n * this->i_fft_num,
-    //       i_grid_size_for_abs,
-    //       i_block_size_for_abs,
-    //       this->stream);
+    Log10(this->p_fft_memory_block,
+          this->p_fft_memory_block,
+          i_ch_n * this->i_fft_num,
+          i_grid_size_for_abs,
+          i_block_size_for_abs,
+          this->stream);
 }
 
 } /* namespace cuda */

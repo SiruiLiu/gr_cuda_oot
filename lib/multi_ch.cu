@@ -32,16 +32,15 @@ __global__ void kernelLog10(cufftComplex* input, cufftComplex* output,int total_
     }
 }
 
-__global__ void kernelSquareSum(cufftComplex* input, float* output, int ch_num, int vector_length){
-    int i = blockIdx.x * blockDim.x + threadIdx.x;
-    int j = blockIdx.y * blockDim.y + threadIdx.y;
-
-    if(j < ch_num){
-        if(i < vector_length){
-            output[j] = output[j] + input[i + j*vector_length].x;
-        }
+__global__ void kernelSquareSum(cufftComplex* input, float* output, 
+                               int ch_num, int vector_length) {
+    int i = blockIdx.y * blockDim.y + threadIdx.y;
+    int j = blockIdx.x * blockDim.x + threadIdx.x;
+    if (i < ch_num && j < vector_length) {
+        atomicAdd(&output[i], input[j + i*vector_length].x);  // 原子操作
     }
 }
+
 
 void applyWindow_multi_ch(cufftComplex* input, cufftComplex* output, float* win_coe, int vector_length,
                  dim3 grid_size, dim3 block_size, cudaStream_t stream){
