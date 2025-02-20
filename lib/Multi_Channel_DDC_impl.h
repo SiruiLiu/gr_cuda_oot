@@ -31,13 +31,12 @@ private:
     cublasHandle_t cublas_handle;
     dim3           i_block_size_for_win;
     dim3           i_grid_size_for_win;
-    int            i_min_grid_size_for_fft;
-    int            i_block_size_for_fft;
-    int            i_min_grid_size_for_in2out;
-    int            i_block_size_for_in2out;
+    dim3           i_grid_size_for_abs;
+    dim3           i_block_size_for_abs;
     float*         win_coe = nullptr;
     cudaDeviceProp prop;
     cufftComplex*  p_fft_memory_block = nullptr;
+    float*         p_square_sum       = nullptr;
 
 public:
     Multi_Channel_DDC_impl(int channel_num, float sample_rate, int vector_length);
@@ -51,6 +50,9 @@ public:
     void allocateGPUSources();
     void allocateGPUSourcesforIn2Out();
     void allocateGPUSourcesforFFT();
+    void allocateGPUSourcesforAbs();
+    void allocateGPUSourcesforEstim();
+    void cuFFTProcess();
 };
 
 }   // namespace cuda

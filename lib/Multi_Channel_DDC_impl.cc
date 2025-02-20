@@ -83,7 +83,19 @@ int Multi_Channel_DDC_impl::work(int noutput_items, gr_vector_const_void_star& i
                              this->stream);
         cudaStreamSynchronize(this->stream);
     }
-    cufftExecC2C(this->plan1d, this->p_fft_memory_block, this->p_fft_memory_block, CUFFT_FORWARD);
+    this->cuFFTProcess();
+    complex_to_mag_square(this->p_fft_memory_block,
+                          this->p_fft_memory_block,
+                          this->i_ch_n * this->i_fft_num,
+                          this->i_grid_size_for_abs,
+                          this->i_block_size_for_abs,
+                          this->stream);
+    Log10(this->p_fft_memory_block,
+          this->p_fft_memory_block,
+          i_ch_n * this->i_fft_num,
+          i_grid_size_for_abs,
+          i_block_size_for_abs,
+          this->stream);
 
     for (int i = 0; i < this->i_ch_n; i++) {
         cudaMemcpyAsync(out[i],
@@ -125,8 +137,6 @@ void Multi_Channel_DDC_impl::genWinCoe()
     }
     this->i_grid_size_for_win.x =
         ceil((this->i_fft_num + this->i_block_size_for_win.x - 1) / this->i_block_size_for_win.x);
-    std::cout << "i_block_size_for_win: " << i_block_size_for_win.x << std::endl;
-    std::cout << "i_grid_size_for_win: " << i_grid_size_for_win.x << std::endl;
     genBlackmanWindow(this->i_fft_num,
                       this->win_coe,
                       this->i_grid_size_for_win,
@@ -139,6 +149,8 @@ void Multi_Channel_DDC_impl::allocateGPUSources()
 {
     cudaGetDeviceProperties(&(this->prop), 0);
     this->allocateGPUSourcesforFFT();
+    this->allocateGPUSourcesforAbs();
+    this->allocateGPUSourcesforEstim();
 }
 
 void Multi_Channel_DDC_impl::allocateGPUSourcesforFFT()
@@ -146,6 +158,40 @@ void Multi_Channel_DDC_impl::allocateGPUSourcesforFFT()
     check_cuda_errors(cudaMallocAsync(&this->p_fft_memory_block,
                                       sizeof(gr_complex) * this->i_fft_num * this->i_ch_n,
                                       this->stream));
+
+    cublasStatus_t status = cublasCreate(&this->cublas_handle);
+    if (status != CUBLAS_STATUS_SUCCESS) {
+        throw std::runtime_error("Failed to initialize CUBLAS");
+    }
+}
+
+void Multi_Channel_DDC_impl::allocateGPUSourcesforAbs()
+{
+    int total_length = this->i_fft_num * this->i_ch_n;
+    std::cout << "Total length: " << total_length << std::endl;
+    if (this->prop.maxThreadsPerBlock > total_length) {
+        this->i_block_size_for_abs.x = total_length;
+    }
+    else {
+        this->i_block_size_for_abs.x = this->prop.maxThreadsPerBlock;
+    }
+
+    this->i_grid_size_for_abs.x =
+        (total_length + this->i_block_size_for_abs.x - 1) / this->i_block_size_for_abs.x;
+}
+
+void Multi_Channel_DDC_impl::allocateGPUSourcesforEstim()
+{
+    check_cuda_errors(
+        cudaMallocAsync(&this->p_square_sum, sizeof(float) * this->i_ch_n, this->stream));
+}
+
+void Multi_Channel_DDC_impl::cuFFTProcess()
+{
+    cufftExecC2C(this->plan1d, this->p_fft_memory_block, this->p_fft_memory_block, CUFFT_FORWARD);
+    float scale = 1.0f / this->i_fft_num;
+    cublasSscal(
+        cublas_handle, 2 * this->i_fft_num * this->i_ch_n, &scale, (float*)p_fft_memory_block, 1);
 }
 
 } /* namespace cuda */
