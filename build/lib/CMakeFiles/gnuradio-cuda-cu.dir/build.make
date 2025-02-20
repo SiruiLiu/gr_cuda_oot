@@ -143,13 +143,29 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
+lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o: lib/CMakeFiles/gnuradio-cuda-cu.dir/flags.make
+lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o: lib/CMakeFiles/gnuradio-cuda-cu.dir/includes_CUDA.rsp
+lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o: /home/dayao/Projects/gpu/gr-cuda/lib/stdfunc.cu
+lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o: lib/CMakeFiles/gnuradio-cuda-cu.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CUDA object lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o"
+	cd /home/dayao/Projects/gpu/gr-cuda/build/lib && /usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o -MF CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o.d -x cu -rdc=true -c /home/dayao/Projects/gpu/gr-cuda/lib/stdfunc.cu -o CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o
+
+lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
 # Object files for target gnuradio-cuda-cu
 gnuradio__cuda__cu_OBJECTS = \
 "CMakeFiles/gnuradio-cuda-cu.dir/cuda_error.cc.o" \
 "CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o" \
 "CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o" \
 "CMakeFiles/gnuradio-cuda-cu.dir/apply_window.cu.o" \
-"CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o"
+"CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o" \
+"CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o"
 
 # External object files for target gnuradio-cuda-cu
 gnuradio__cuda__cu_EXTERNAL_OBJECTS =
@@ -159,9 +175,10 @@ lib/libgnuradio-cuda-cu.a: lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu
 lib/libgnuradio-cuda-cu.a: lib/CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o
 lib/libgnuradio-cuda-cu.a: lib/CMakeFiles/gnuradio-cuda-cu.dir/apply_window.cu.o
 lib/libgnuradio-cuda-cu.a: lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o
+lib/libgnuradio-cuda-cu.a: lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o
 lib/libgnuradio-cuda-cu.a: lib/CMakeFiles/gnuradio-cuda-cu.dir/build.make
 lib/libgnuradio-cuda-cu.a: lib/CMakeFiles/gnuradio-cuda-cu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libgnuradio-cuda-cu.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libgnuradio-cuda-cu.a"
 	cd /home/dayao/Projects/gpu/gr-cuda/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/gnuradio-cuda-cu.dir/cmake_clean_target.cmake
 	cd /home/dayao/Projects/gpu/gr-cuda/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gnuradio-cuda-cu.dir/link.txt --verbose=$(VERBOSE)
 

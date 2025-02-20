@@ -54,7 +54,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "pythonapi" OR NOT CMAKE_INSTALL_COMPONENT)
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/cuda/cuda_python.cpython-312-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/cuda/cuda_python.cpython-312-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/dayao/Projects/gpu/gr-cuda/build/lib:/home/dayao/anaconda3/lib:/usr/local/cuda/lib64:/usr/local/cuda-12.8/lib64:"
+         OLD_RPATH "/home/dayao/Projects/gpu/gr-cuda/build/lib:/usr/local/cuda/lib64:/usr/local/cuda-12.8/lib64:/home/dayao/anaconda3/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/cuda/cuda_python.cpython-312-x86_64-linux-gnu.so")

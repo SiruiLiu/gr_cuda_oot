@@ -17,7 +17,7 @@ void complex_to_mag_square(cufftComplex* input, cufftComplex* output, int total_
 void Log10(cufftComplex* input, cufftComplex* output, int total_length,
            dim3 grid_size, dim3 block_size, cudaStream_t stream);
 
-void SquareSum(cufftComplex* input, float* output, int ch_num,
+void SquareSum(cufftComplex* input, float* output, int ch_num, int vector_length,
                dim3 grid_size, dim3 block_size, cudaStream_t stream);
 
 #endif

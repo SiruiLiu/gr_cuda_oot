@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/dayao/Projects/gpu/gr-cuda/lib/load.cu" "lib/CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o" "gcc" "lib/CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o.d"
   "/home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cu" "lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o" "gcc" "lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o.d"
   "/home/dayao/Projects/gpu/gr-cuda/lib/multiply_const.cu" "lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o" "gcc" "lib/CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o.d"
+  "/home/dayao/Projects/gpu/gr-cuda/lib/stdfunc.cu" "lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o" "gcc" "lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o.d"
   "/home/dayao/Projects/gpu/gr-cuda/lib/cuda_error.cc" "lib/CMakeFiles/gnuradio-cuda-cu.dir/cuda_error.cc.o" "gcc" "lib/CMakeFiles/gnuradio-cuda-cu.dir/cuda_error.cc.o.d"
   )
 

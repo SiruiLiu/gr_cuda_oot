@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o.d"
   "CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o"
   "CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o.d"
+  "CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o"
+  "CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o.d"
   "libgnuradio-cuda-cu.a"
   "libgnuradio-cuda-cu.pdb"
 )

@@ -1,3 +1,4 @@
+/* -*- cu -*- */
 #include "multi_ch.cuh"
 #include <gnuradio/gr_complex.h>
 #include <gnuradio/cuda/cuda_error.h>
@@ -35,10 +36,6 @@ __global__ void kernelSquareSum(cufftComplex* input, float* output, int ch_num, 
     int i = blockIdx.x * blockDim.x + threadIdx.x;
     int j = blockIdx.y * blockDim.y + threadIdx.y;
 
-    if (j < ch_num){
-        output[j] = 0; 
-    }
-
     if(j < ch_num){
         if(i < vector_length){
             output[j] = output[j] + input[i + j*vector_length].x;
@@ -66,5 +63,6 @@ void Log10(cufftComplex* input, cufftComplex* output, int total_length,
 
 void SquareSum(cufftComplex* input, float* output, int ch_num, int vector_length,
                dim3 grid_size, dim3 block_size, cudaStream_t stream){
+    kernelSquareSum<<<grid_size, block_size, 0, stream>>>(input, output, ch_num, vector_length);
     check_cuda_errors(cudaGetLastError());
 }

@@ -487,6 +487,30 @@ multiply_const_impl.cc.s:
 	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-cuda.dir/build.make lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.s
 .PHONY : multiply_const_impl.cc.s
 
+stdfunc.o: stdfunc.cu.o
+.PHONY : stdfunc.o
+
+# target to build an object file
+stdfunc.cu.o:
+	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-cuda-cu.dir/build.make lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o
+.PHONY : stdfunc.cu.o
+
+stdfunc.i: stdfunc.cu.i
+.PHONY : stdfunc.i
+
+# target to preprocess a source file
+stdfunc.cu.i:
+	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-cuda-cu.dir/build.make lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.i
+.PHONY : stdfunc.cu.i
+
+stdfunc.s: stdfunc.cu.s
+.PHONY : stdfunc.s
+
+# target to generate assembly for a file
+stdfunc.cu.s:
+	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/gnuradio-cuda-cu.dir/build.make lib/CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.s
+.PHONY : stdfunc.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -538,6 +562,9 @@ help:
 	@echo "... multiply_const_impl.o"
 	@echo "... multiply_const_impl.i"
 	@echo "... multiply_const_impl.s"
+	@echo "... stdfunc.o"
+	@echo "... stdfunc.i"
+	@echo "... stdfunc.s"
 .PHONY : help
 
 

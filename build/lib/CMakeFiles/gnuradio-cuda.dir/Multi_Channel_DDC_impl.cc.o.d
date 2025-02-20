@@ -1075,6 +1075,7 @@ lib/CMakeFiles/gnuradio-cuda.dir/Multi_Channel_DDC_impl.cc.o: \
  /usr/include/gmpxx.h /usr/include/c++/13/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
  /usr/include/x86_64-linux-gnu/gmp.h \
+ /usr/local/cuda/include/driver_types.h \
  /home/dayao/Projects/gpu/gr-cuda/lib/../include/gnuradio/cuda/Multi_Channel_DDC.h \
  /usr/include/gnuradio/sync_block.h \
  /home/dayao/Projects/gpu/gr-cuda/lib/apply_window.cuh \
@@ -1084,7 +1085,9 @@ lib/CMakeFiles/gnuradio-cuda.dir/Multi_Channel_DDC_impl.cc.o: \
  /usr/local/cuda/include/channel_descriptor.h \
  /usr/local/cuda/include/driver_functions.h \
  /home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cuh \
- /usr/local/cuda/include/driver_types.h \
+ /home/dayao/Projects/gpu/gr-cuda/lib/stdfunc.cuh \
+ /usr/local/cuda/include/curand_mtgp32_kernel.h /usr/include/memory.h \
+ /usr/local/cuda/include/curand.h /usr/local/cuda/include/curand_mtgp32.h \
  /home/dayao/Projects/gpu/gr-cuda/lib/../include/gnuradio/cuda/cuda_buffer.h \
  /usr/include/gnuradio/buffer_single_mapped.h \
  /usr/include/gnuradio/buffer_reader.h

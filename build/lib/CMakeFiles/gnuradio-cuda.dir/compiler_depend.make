@@ -12,6 +12,7 @@ lib/CMakeFiles/gnuradio-cuda.dir/Multi_Channel_DDC_impl.cc.o: /home/dayao/Projec
   /home/dayao/Projects/gpu/gr-cuda/lib/apply_window.cuh \
   /home/dayao/Projects/gpu/gr-cuda/lib/cufft_impl.h \
   /home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cuh \
+  /home/dayao/Projects/gpu/gr-cuda/lib/stdfunc.cuh \
   /home/dayao/anaconda3/include/boost/any.hpp \
   /home/dayao/anaconda3/include/boost/any/bad_any_cast.hpp \
   /home/dayao/anaconda3/include/boost/any/fwd.hpp \
@@ -985,6 +986,7 @@ lib/CMakeFiles/gnuradio-cuda.dir/Multi_Channel_DDC_impl.cc.o: /home/dayao/Projec
   /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
+  /usr/include/memory.h \
   /usr/include/pmt/api.h \
   /usr/include/pmt/pmt.h \
   /usr/include/pmt/pmt_sugar.h \
@@ -1162,6 +1164,9 @@ lib/CMakeFiles/gnuradio-cuda.dir/Multi_Channel_DDC_impl.cc.o: /home/dayao/Projec
   /usr/local/cuda/include/cuda_runtime.h \
   /usr/local/cuda/include/cuda_runtime_api.h \
   /usr/local/cuda/include/cufft.h \
+  /usr/local/cuda/include/curand.h \
+  /usr/local/cuda/include/curand_mtgp32.h \
+  /usr/local/cuda/include/curand_mtgp32_kernel.h \
   /usr/local/cuda/include/device_types.h \
   /usr/local/cuda/include/driver_functions.h \
   /usr/local/cuda/include/driver_types.h \
@@ -8153,7 +8158,9 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /usr/local/cuda/include/driver_types.h:
 
-/usr/local/cuda/include/device_types.h:
+/usr/local/cuda/include/curand_mtgp32_kernel.h:
+
+/usr/local/cuda/include/curand.h:
 
 /usr/local/cuda/include/cufft.h:
 
@@ -8225,9 +8232,7 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/home/dayao/anaconda3/include/boost/preprocessor/variadic/has_opt.hpp:
-
-/usr/include/c++/13/bits/basic_ios.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /home/dayao/anaconda3/include/boost/preprocessor/logical/not.hpp:
 
@@ -8681,6 +8686,14 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /home/dayao/anaconda3/include/boost/mpl/aux_/preprocessed/gcc/times.hpp:
 
+/home/dayao/anaconda3/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+/home/dayao/anaconda3/include/boost/bind/std_placeholders.hpp:
+
+/home/dayao/anaconda3/include/boost/preprocessor/variadic/size.hpp:
+
+/home/dayao/anaconda3/include/boost/thread/cv_status.hpp:
+
 /home/dayao/anaconda3/include/boost/date_time/posix_time/time_period.hpp:
 
 /home/dayao/anaconda3/include/boost/date_time/posix_time/posix_time_types.hpp:
@@ -8764,8 +8777,6 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 /home/dayao/anaconda3/include/boost/core/swap.hpp:
 
 /home/dayao/anaconda3/include/boost/predef/os/unix.h:
-
-/home/dayao/anaconda3/include/boost/date_time/time_clock.hpp:
 
 /home/dayao/anaconda3/include/boost/predef/hardware/simd/arm.h:
 
@@ -8851,21 +8862,35 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /home/dayao/anaconda3/include/boost/exception/exception.hpp:
 
-/home/dayao/anaconda3/include/boost/bind/std_placeholders.hpp:
+/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cuda_buffer.h:
 
-/home/dayao/anaconda3/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+/home/dayao/anaconda3/include/boost/container_hash/is_described_class.hpp:
 
-/home/dayao/anaconda3/include/boost/preprocessor/variadic/size.hpp:
+/home/dayao/anaconda3/include/boost/mpl/aux_/msvc_eti_base.hpp:
 
-/home/dayao/anaconda3/include/boost/thread/cv_status.hpp:
+/home/dayao/anaconda3/include/boost/chrono/detail/requires_cxx11.hpp:
 
-/home/dayao/anaconda3/include/boost/date_time/gregorian/greg_duration.hpp:
+/home/dayao/anaconda3/include/boost/thread/condition_variable.hpp:
 
-/home/dayao/anaconda3/include/boost/mpl/aux_/adl_barrier.hpp:
+/home/dayao/anaconda3/include/boost/mpl/aux_/preprocessor/params.hpp:
 
-/usr/local/cuda/include/vector_functions.h:
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
-/home/dayao/anaconda3/include/boost/predef/detail/os_detected.h:
+/home/dayao/anaconda3/include/boost/config/stdlib/libstdcpp3.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/home/dayao/anaconda3/include/boost/mp11/detail/config.hpp:
+
+/home/dayao/anaconda3/include/boost/system/detail/interop_category.hpp:
+
+/home/dayao/anaconda3/include/boost/date_time/filetime_functions.hpp:
+
+/home/dayao/Projects/gpu/gr-cuda/lib/multiply_const_impl.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/c++/13/memory:
 
 /home/dayao/anaconda3/include/boost/preprocessor/logical/compl.hpp:
 
@@ -8943,6 +8968,16 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /usr/include/c++/13/chrono:
 
+/home/dayao/anaconda3/include/boost/mpl/int_fwd.hpp:
+
+/home/dayao/anaconda3/include/boost/date_time/time_duration.hpp:
+
+/home/dayao/anaconda3/include/boost/mpl/aux_/config/ttp.hpp:
+
+/home/dayao/anaconda3/include/boost/move/adl_move_swap.hpp:
+
+/home/dayao/anaconda3/include/boost/format/parsing.hpp:
+
 /home/dayao/anaconda3/include/boost/container_hash/detail/hash_mix.hpp:
 
 /home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/Multi_Channel_DDC.h:
@@ -8958,8 +8993,6 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 /usr/include/c++/13/bits/this_thread_sleep.h:
 
 /usr/include/gnuradio/messages/msg_producer.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /home/dayao/anaconda3/include/boost/is_placeholder.hpp:
 
@@ -9013,23 +9046,49 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /home/dayao/anaconda3/include/boost/get_pointer.hpp:
 
-/home/dayao/anaconda3/include/boost/date_time/adjust_functors.hpp:
+/usr/include/c++/13/bits/charconv.h:
 
-/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cuda_block.h:
+/home/dayao/anaconda3/include/boost/any/bad_any_cast.hpp:
 
-/home/dayao/anaconda3/include/boost/predef/os/bsd/free.h:
+/home/dayao/anaconda3/include/boost/preprocessor/empty.hpp:
 
-/home/dayao/anaconda3/include/boost/config/pragma_message.hpp:
+/home/dayao/anaconda3/include/boost/date_time/microsec_time_clock.hpp:
 
-/home/dayao/anaconda3/include/boost/bind/bind_mf2_cc.hpp:
+/home/dayao/anaconda3/include/boost/container_hash/detail/hash_tuple_like.hpp:
 
-/home/dayao/anaconda3/include/boost/predef/os/bsd.h:
+/home/dayao/anaconda3/include/boost/mp11/detail/mp_append.hpp:
 
-/home/dayao/anaconda3/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
 
-/home/dayao/anaconda3/include/boost/mpl/bool.hpp:
+/usr/include/spdlog/fmt/fmt.h:
 
-/home/dayao/anaconda3/include/boost/date_time/posix_time/date_duration_operators.hpp:
+/home/dayao/anaconda3/include/boost/format/alt_sstream.hpp:
+
+/usr/include/c++/13/complex:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/home/dayao/anaconda3/include/boost/core/ref.hpp:
+
+/home/dayao/anaconda3/include/boost/preprocessor/punctuation/comma.hpp:
+
+/home/dayao/anaconda3/include/boost/predef/library/c/vms.h:
+
+/usr/include/c++/13/ext/string_conversions.h:
+
+/home/dayao/anaconda3/include/boost/numeric/conversion/udt_builtin_mixture_enum.hpp:
+
+/usr/include/c++/13/cwchar:
+
+/home/dayao/anaconda3/include/boost/date_time/posix_time/ptime.hpp:
+
+/home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cuh:
+
+/home/dayao/anaconda3/include/boost/date_time/locale_config.hpp:
+
+/home/dayao/anaconda3/include/boost/mp11/detail/mp_is_list.hpp:
+
+/home/dayao/anaconda3/include/boost/type_traits/is_unsigned.hpp:
 
 /home/dayao/anaconda3/include/boost/mpl/identity.hpp:
 
@@ -9047,6 +9106,10 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /home/dayao/anaconda3/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp:
 
+/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cuda_block.h:
+
+/home/dayao/anaconda3/include/boost/date_time/adjust_functors.hpp:
+
 /home/dayao/anaconda3/include/boost/container_hash/hash_fwd.hpp:
 
 /home/dayao/anaconda3/include/boost/mp11/bind.hpp:
@@ -9055,45 +9118,15 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /home/dayao/anaconda3/include/boost/predef/architecture/x86/64.h:
 
-/home/dayao/anaconda3/include/boost/preprocessor/empty.hpp:
+/home/dayao/anaconda3/include/boost/mpl/bool.hpp:
 
-/home/dayao/anaconda3/include/boost/date_time/microsec_time_clock.hpp:
+/home/dayao/anaconda3/include/boost/date_time/posix_time/date_duration_operators.hpp:
 
-/home/dayao/anaconda3/include/boost/container_hash/detail/hash_tuple_like.hpp:
+/home/dayao/anaconda3/include/boost/bind/bind_mf2_cc.hpp:
 
-/home/dayao/anaconda3/include/boost/mp11/detail/mp_append.hpp:
+/home/dayao/anaconda3/include/boost/predef/os/bsd.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
-
-/usr/include/spdlog/fmt/fmt.h:
-
-/home/dayao/anaconda3/include/boost/preprocessor/punctuation/comma.hpp:
-
-/home/dayao/anaconda3/include/boost/predef/library/c/vms.h:
-
-/usr/include/c++/13/ext/string_conversions.h:
-
-/home/dayao/anaconda3/include/boost/numeric/conversion/udt_builtin_mixture_enum.hpp:
-
-/usr/include/c++/13/cwchar:
-
-/home/dayao/anaconda3/include/boost/date_time/posix_time/ptime.hpp:
-
-/home/dayao/anaconda3/include/boost/date_time/locale_config.hpp:
-
-/home/dayao/anaconda3/include/boost/mp11/detail/mp_is_list.hpp:
-
-/home/dayao/anaconda3/include/boost/type_traits/is_unsigned.hpp:
-
-/home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cuh:
-
-/home/dayao/anaconda3/include/boost/format/alt_sstream.hpp:
-
-/usr/include/c++/13/complex:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/home/dayao/anaconda3/include/boost/core/ref.hpp:
+/home/dayao/anaconda3/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp:
 
 /home/dayao/anaconda3/include/boost/bind/placeholders.hpp:
 
@@ -9105,25 +9138,7 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /home/dayao/anaconda3/include/boost/mpl/aux_/config/has_xxx.hpp:
 
-/home/dayao/anaconda3/include/boost/functional/hash.hpp:
-
-/home/dayao/anaconda3/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
-
-/home/dayao/anaconda3/include/boost/chrono/detail/requires_cxx11.hpp:
-
-/home/dayao/anaconda3/include/boost/thread/condition_variable.hpp:
-
-/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cuda_buffer.h:
-
-/home/dayao/anaconda3/include/boost/container_hash/is_described_class.hpp:
-
-/home/dayao/anaconda3/include/boost/mpl/aux_/msvc_eti_base.hpp:
-
-/home/dayao/anaconda3/include/boost/mpl/aux_/preprocessor/params.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/home/dayao/anaconda3/include/boost/config/stdlib/libstdcpp3.hpp:
+/home/dayao/anaconda3/include/boost/config/pragma_message.hpp:
 
 /home/dayao/anaconda3/include/boost/core/checked_delete.hpp:
 
@@ -9135,23 +9150,11 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /home/dayao/anaconda3/include/boost/chrono/ceil.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/home/dayao/anaconda3/include/boost/mp11/detail/config.hpp:
-
-/home/dayao/anaconda3/include/boost/system/detail/interop_category.hpp:
-
-/home/dayao/anaconda3/include/boost/date_time/filetime_functions.hpp:
-
 /home/dayao/Projects/gpu/gr-cuda/lib/cufft_impl.h:
 
 /home/dayao/anaconda3/include/boost/preprocessor/repetition/limits/repeat_256.hpp:
 
 /home/dayao/anaconda3/include/boost/thread/detail/thread_interruption.hpp:
-
-/home/dayao/anaconda3/include/boost/mpl/int_fwd.hpp:
-
-/home/dayao/anaconda3/include/boost/date_time/time_duration.hpp:
 
 /home/dayao/anaconda3/include/boost/mpl/aux_/config/compiler.hpp:
 
@@ -9176,6 +9179,20 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 /home/dayao/anaconda3/include/boost/container_hash/detail/requires_cxx11.hpp:
 
 /home/dayao/anaconda3/include/boost/mpl/aux_/numeric_op.hpp:
+
+/home/dayao/anaconda3/include/boost/functional/hash.hpp:
+
+/home/dayao/anaconda3/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
+
+/home/dayao/anaconda3/include/boost/date_time/gregorian/greg_duration.hpp:
+
+/home/dayao/anaconda3/include/boost/mpl/aux_/adl_barrier.hpp:
+
+/usr/local/cuda/include/vector_functions.h:
+
+/home/dayao/anaconda3/include/boost/predef/detail/os_detected.h:
+
+/home/dayao/anaconda3/include/boost/predef/os/bsd/free.h:
 
 /home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cuda_error.h:
 
@@ -9218,6 +9235,8 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 /usr/include/x86_64-linux-gnu/c++/13/bits/cxxabi_tweaks.h:
 
 /home/dayao/anaconda3/include/boost/config/requires_threads.hpp:
+
+/home/dayao/anaconda3/include/boost/date_time/time_clock.hpp:
 
 /home/dayao/anaconda3/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
 
@@ -9346,16 +9365,6 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 /home/dayao/anaconda3/include/boost/optional/detail/optional_relops.hpp:
 
 /home/dayao/anaconda3/include/boost/format/group.hpp:
-
-/home/dayao/anaconda3/include/boost/format/parsing.hpp:
-
-/home/dayao/anaconda3/include/boost/mpl/aux_/config/ttp.hpp:
-
-/home/dayao/anaconda3/include/boost/move/adl_move_swap.hpp:
-
-/home/dayao/anaconda3/include/boost/any/bad_any_cast.hpp:
-
-/usr/include/c++/13/bits/charconv.h:
 
 /home/dayao/anaconda3/include/boost/predef/architecture/blackfin.h:
 
@@ -9559,6 +9568,10 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /home/dayao/anaconda3/include/boost/mpl/aux_/nttp_decl.hpp:
 
+/home/dayao/anaconda3/include/boost/preprocessor/variadic/has_opt.hpp:
+
+/usr/include/c++/13/bits/basic_ios.h:
+
 /home/dayao/anaconda3/include/boost/predef/architecture/parisc.h:
 
 /home/dayao/anaconda3/include/boost/preprocessor/variadic/limits/elem_64.hpp:
@@ -9681,9 +9694,9 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /home/dayao/anaconda3/include/boost/system/detail/std_category_impl.hpp:
 
-/usr/include/gnuradio/buffer_type.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/gnuradio/buffer_type.h:
 
 /home/dayao/anaconda3/include/boost/system/detail/system_category_message.hpp:
 
@@ -9945,6 +9958,8 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /usr/include/c++/13/tr1/riemann_zeta.tcc:
 
+/home/dayao/Projects/gpu/gr-cuda/lib/stdfunc.cuh:
+
 /home/dayao/anaconda3/include/boost/type_traits/is_rvalue_reference.hpp:
 
 /home/dayao/anaconda3/include/boost/type_traits/is_union.hpp:
@@ -9974,12 +9989,6 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 /home/dayao/anaconda3/include/fmt/format.h:
 
 /home/dayao/anaconda3/include/fmt/ostream.h:
-
-/home/dayao/Projects/gpu/gr-cuda/lib/multiply_const_impl.h:
-
-/usr/include/c++/13/memory:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/alloca.h:
 
@@ -10377,6 +10386,10 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 
 /usr/include/locale.h:
 
+/usr/local/cuda/include/device_types.h:
+
+/usr/include/memory.h:
+
 /home/dayao/anaconda3/include/boost/type_traits/remove_cv.hpp:
 
 /usr/include/pmt/api.h:
@@ -10448,6 +10461,8 @@ lib/CMakeFiles/gnuradio-cuda.dir/multiply_const_impl.cc.o: /home/dayao/Projects/
 /home/dayao/anaconda3/include/boost/format/internals.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/local/cuda/include/curand_mtgp32.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 

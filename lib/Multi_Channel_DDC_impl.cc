@@ -10,7 +10,7 @@
 #include "cufft_impl.h"
 #include "gnuradio/cuda/Multi_Channel_DDC.h"
 #include "multi_ch.cuh"
-#include <cstddef>
+#include "stdfunc.cuh"
 #include <cuda_runtime.h>
 #include <cuda_runtime_api.h>
 #include <cufft.h>
@@ -47,7 +47,6 @@ Multi_Channel_DDC_impl::Multi_Channel_DDC_impl(int channel_num, float sample_rat
     , i_fft_num(vector_length)
 {
     check_cuda_errors(cudaStreamCreate(&this->stream));   // Create cuda stream for further process
-    this->createFFTPlane();                               // Create multiple channel FFT plan.
     this->allocateGPUSources();
     this->genWinCoe();   // Generate window coefficients for FFT process.
 }
@@ -61,6 +60,9 @@ Multi_Channel_DDC_impl::~Multi_Channel_DDC_impl()
     cublasDestroy(cublas_handle);
     cudaStreamDestroy(this->stream);
     cudaFree(this->win_coe);
+    this->win_coe = nullptr;
+    cudaFree(this->p_square_sum);
+    this->p_square_sum = nullptr;
 }
 
 int Multi_Channel_DDC_impl::work(int noutput_items, gr_vector_const_void_star& input_items,
@@ -74,28 +76,18 @@ int Multi_Channel_DDC_impl::work(int noutput_items, gr_vector_const_void_star& i
     for (int i = 0; i < this->i_ch_n; i++) {
         in[i]  = (input_type*)input_items[i];
         out[i] = (output_type*)output_items[i];
-        applyWindow_multi_ch((cufftComplex*)in[i],
-                             this->p_fft_memory_block + i * this->i_fft_num,
-                             this->win_coe,
-                             this->i_fft_num,
-                             this->i_grid_size_for_win,
-                             this->i_block_size_for_win,
-                             this->stream);
+        applyWindow_multi_ch(
+            (cufftComplex*)in[i],
+            this->p_fft_memory_block + i * this->i_fft_num,
+            this->win_coe,
+            this->i_fft_num,
+            this->i_grid_size_for_win,
+            this->i_block_size_for_win,
+            this->stream);   // Apply window to data stream and send to continuous memory block
         cudaStreamSynchronize(this->stream);
     }
     this->cuFFTProcess();
-    complex_to_mag_square(this->p_fft_memory_block,
-                          this->p_fft_memory_block,
-                          this->i_ch_n * this->i_fft_num,
-                          this->i_grid_size_for_abs,
-                          this->i_block_size_for_abs,
-                          this->stream);
-    Log10(this->p_fft_memory_block,
-          this->p_fft_memory_block,
-          i_ch_n * this->i_fft_num,
-          i_grid_size_for_abs,
-          i_block_size_for_abs,
-          this->stream);
+    this->cuEstimates();
 
     for (int i = 0; i < this->i_ch_n; i++) {
         cudaMemcpyAsync(out[i],
@@ -148,27 +140,28 @@ void Multi_Channel_DDC_impl::genWinCoe()
 void Multi_Channel_DDC_impl::allocateGPUSources()
 {
     cudaGetDeviceProperties(&(this->prop), 0);
-    this->allocateGPUSourcesforFFT();
-    this->allocateGPUSourcesforAbs();
-    this->allocateGPUSourcesforEstim();
+    this->allocateGPUSourcesForFFT();
+    this->allocateGPUSourcesForAbs();
+    this->allocateGPUSourcesForEstim();
 }
 
-void Multi_Channel_DDC_impl::allocateGPUSourcesforFFT()
+void Multi_Channel_DDC_impl::allocateGPUSourcesForFFT()
 {
     check_cuda_errors(cudaMallocAsync(&this->p_fft_memory_block,
                                       sizeof(gr_complex) * this->i_fft_num * this->i_ch_n,
                                       this->stream));
 
-    cublasStatus_t status = cublasCreate(&this->cublas_handle);
+    cublasStatus_t status =
+        cublasCreate(&this->cublas_handle);   // Prepare cublas handler for FFT normalization
     if (status != CUBLAS_STATUS_SUCCESS) {
         throw std::runtime_error("Failed to initialize CUBLAS");
     }
+    this->createFFTPlane();   // Create multiple channel FFT plan.
 }
 
-void Multi_Channel_DDC_impl::allocateGPUSourcesforAbs()
+void Multi_Channel_DDC_impl::allocateGPUSourcesForAbs()
 {
     int total_length = this->i_fft_num * this->i_ch_n;
-    std::cout << "Total length: " << total_length << std::endl;
     if (this->prop.maxThreadsPerBlock > total_length) {
         this->i_block_size_for_abs.x = total_length;
     }
@@ -180,10 +173,16 @@ void Multi_Channel_DDC_impl::allocateGPUSourcesforAbs()
         (total_length + this->i_block_size_for_abs.x - 1) / this->i_block_size_for_abs.x;
 }
 
-void Multi_Channel_DDC_impl::allocateGPUSourcesforEstim()
+void Multi_Channel_DDC_impl::allocateGPUSourcesForEstim()
 {
     check_cuda_errors(
         cudaMallocAsync(&this->p_square_sum, sizeof(float) * this->i_ch_n, this->stream));
+    this->i_block_size_for_ssum.x = 32;
+    this->i_block_size_for_ssum.y = 32;
+    this->i_grid_size_for_ssum.x =
+        (this->i_fft_num + this->i_block_size_for_ssum.x - 1) / this->i_block_size_for_ssum.x;
+    this->i_grid_size_for_ssum.y =
+        (this->i_ch_n + this->i_block_size_for_ssum.y - 1) / this->i_block_size_for_ssum.y;
 }
 
 void Multi_Channel_DDC_impl::cuFFTProcess()
@@ -192,6 +191,40 @@ void Multi_Channel_DDC_impl::cuFFTProcess()
     float scale = 1.0f / this->i_fft_num;
     cublasSscal(
         cublas_handle, 2 * this->i_fft_num * this->i_ch_n, &scale, (float*)p_fft_memory_block, 1);
+}
+
+
+void Multi_Channel_DDC_impl::cuEstimates()
+{
+    complex_to_mag_square(this->p_fft_memory_block,
+                          this->p_fft_memory_block,
+                          this->i_ch_n * this->i_fft_num,
+                          this->i_grid_size_for_abs,
+                          this->i_block_size_for_abs,
+                          this->stream);
+    cudaStreamSynchronize(this->stream);
+    cuClearMemory(this->p_square_sum,
+                  this->i_ch_n,
+                  this->i_grid_size_for_ssum,
+                  this->i_block_size_for_ssum,
+                  this->stream);
+    cudaStreamSynchronize(this->stream);
+    SquareSum(this->p_fft_memory_block,
+              this->p_square_sum,
+              this->i_ch_n,
+              this->i_fft_num,
+              this->i_grid_size_for_ssum,
+              this->i_block_size_for_ssum,
+              this->stream);
+    cudaStreamSynchronize(this->stream);
+    this->Display(this->p_square_sum, this->i_ch_n);
+    sleep(2);
+    // Log10(this->p_fft_memory_block,
+    //       this->p_fft_memory_block,
+    //       i_ch_n * this->i_fft_num,
+    //       i_grid_size_for_abs,
+    //       i_block_size_for_abs,
+    //       this->stream);
 }
 
 } /* namespace cuda */

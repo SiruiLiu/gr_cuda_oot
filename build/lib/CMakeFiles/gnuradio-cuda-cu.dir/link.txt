@@ -1,2 +1,2 @@
-/usr/bin/ar qc libgnuradio-cuda-cu.a "CMakeFiles/gnuradio-cuda-cu.dir/cuda_error.cc.o" "CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o" "CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o" "CMakeFiles/gnuradio-cuda-cu.dir/apply_window.cu.o" "CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o"
+/usr/bin/ar qc libgnuradio-cuda-cu.a "CMakeFiles/gnuradio-cuda-cu.dir/cuda_error.cc.o" "CMakeFiles/gnuradio-cuda-cu.dir/multiply_const.cu.o" "CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o" "CMakeFiles/gnuradio-cuda-cu.dir/apply_window.cu.o" "CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o" "CMakeFiles/gnuradio-cuda-cu.dir/stdfunc.cu.o"
 /usr/bin/ranlib libgnuradio-cuda-cu.a
