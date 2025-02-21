@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dayao/Projects/gpu/gr-cuda
+CMAKE_SOURCE_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dayao/Projects/gpu/gr-cuda/build
+CMAKE_BINARY_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build
 
 # Utility rule file for copy_module_for_tests.
 
@@ -67,7 +67,7 @@ include python/cuda/CMakeFiles/copy_module_for_tests.dir/compiler_depend.make
 include python/cuda/CMakeFiles/copy_module_for_tests.dir/progress.make
 
 python/cuda/CMakeFiles/copy_module_for_tests:
-	cd /home/dayao/Projects/gpu/gr-cuda/build/python/cuda && /usr/bin/cmake -E copy_directory /home/dayao/Projects/gpu/gr-cuda/python/cuda /home/dayao/Projects/gpu/gr-cuda/build/test_modules/gnuradio/cuda/
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda && /usr/bin/cmake -E copy_directory /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/test_modules/gnuradio/cuda/
 
 copy_module_for_tests: python/cuda/CMakeFiles/copy_module_for_tests
 copy_module_for_tests: python/cuda/CMakeFiles/copy_module_for_tests.dir/build.make
@@ -78,10 +78,10 @@ python/cuda/CMakeFiles/copy_module_for_tests.dir/build: copy_module_for_tests
 .PHONY : python/cuda/CMakeFiles/copy_module_for_tests.dir/build
 
 python/cuda/CMakeFiles/copy_module_for_tests.dir/clean:
-	cd /home/dayao/Projects/gpu/gr-cuda/build/python/cuda && $(CMAKE_COMMAND) -P CMakeFiles/copy_module_for_tests.dir/cmake_clean.cmake
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda && $(CMAKE_COMMAND) -P CMakeFiles/copy_module_for_tests.dir/cmake_clean.cmake
 .PHONY : python/cuda/CMakeFiles/copy_module_for_tests.dir/clean
 
 python/cuda/CMakeFiles/copy_module_for_tests.dir/depend:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dayao/Projects/gpu/gr-cuda /home/dayao/Projects/gpu/gr-cuda/python/cuda /home/dayao/Projects/gpu/gr-cuda/build /home/dayao/Projects/gpu/gr-cuda/build/python/cuda /home/dayao/Projects/gpu/gr-cuda/build/python/cuda/CMakeFiles/copy_module_for_tests.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/CMakeFiles/copy_module_for_tests.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : python/cuda/CMakeFiles/copy_module_for_tests.dir/depend
 

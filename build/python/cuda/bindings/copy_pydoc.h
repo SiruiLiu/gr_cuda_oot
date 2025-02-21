@@ -16,12 +16,30 @@
 
 
  
- static const char *__doc_gr_cuda_copy = R"doc()doc";
+ static const char *__doc_gr_cuda_copy = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Return a shared_ptr to a new instance of cuda::copy.
+
+To avoid accidental use of raw pointers, cuda::copy's constructor is in a private implementation class. cuda::copy::make is the public interface for creating new instances.
+
+Args:
+    itemsize : )doc";
 
 
  static const char *__doc_gr_cuda_copy_copy = R"doc()doc";
 
 
- static const char *__doc_gr_cuda_copy_make = R"doc()doc";
+ static const char *__doc_gr_cuda_copy_make = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Return a shared_ptr to a new instance of cuda::copy.
+
+To avoid accidental use of raw pointers, cuda::copy's constructor is in a private implementation class. cuda::copy::make is the public interface for creating new instances.
+
+Args:
+    itemsize : )doc";
 
   

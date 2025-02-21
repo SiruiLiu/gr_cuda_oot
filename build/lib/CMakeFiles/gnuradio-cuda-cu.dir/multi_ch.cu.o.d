@@ -1,4 +1,4 @@
-lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o : /home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cu \
+lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o : /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/lib/multi_ch.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/crt/host_config.h \
@@ -194,7 +194,7 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o : /home/dayao/Projects/gpu/gr-
     /usr/include/c++/13/utility \
     /usr/include/c++/13/bits/stl_relops.h \
     /usr/include/c++/13/initializer_list \
-    /home/dayao/Projects/gpu/gr-cuda/lib/multi_ch.cuh \
+    /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/lib/multi_ch.cuh \
     /usr/include/gnuradio/gr_complex.h \
     /usr/include/c++/13/complex \
     /usr/include/c++/13/sstream \
@@ -1216,7 +1216,7 @@ lib/CMakeFiles/gnuradio-cuda-cu.dir/multi_ch.cu.o : /home/dayao/Projects/gpu/gr-
     /usr/include/gnuradio/messages/msg_accepter.h \
     /usr/include/gnuradio/transfer_type.h \
     /usr/include/c++/13/iostream \
-    /home/dayao/Projects/gpu/gr-cuda/lib/../include/gnuradio/cuda/cuda_error.h \
+    /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/lib/../include/gnuradio/cuda/cuda_error.h \
     /usr/local/cuda/include/curand_mtgp32_kernel.h \
     /usr/include/memory.h \
     /usr/local/cuda/include/nv/target \

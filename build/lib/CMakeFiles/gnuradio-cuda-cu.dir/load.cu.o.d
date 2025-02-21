@@ -1,4 +1,4 @@
-lib/CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o : /home/dayao/Projects/gpu/gr-cuda/lib/load.cu \
+lib/CMakeFiles/gnuradio-cuda-cu.dir/load.cu.o : /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/lib/load.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/crt/host_config.h \

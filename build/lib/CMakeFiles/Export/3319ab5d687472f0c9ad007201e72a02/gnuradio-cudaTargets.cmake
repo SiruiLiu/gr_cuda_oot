@@ -60,7 +60,7 @@ add_library(gnuradio::gnuradio-cuda SHARED IMPORTED)
 
 set_target_properties(gnuradio::gnuradio-cuda PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/local/cuda/include"
-  INTERFACE_LINK_LIBRARIES "gnuradio::gnuradio-runtime;/usr/local/cuda/lib64/libcudart.so;/usr/local/cuda/lib64/libcublas.so;/usr/local/cuda-12.8/lib64/libcufft.so"
+  INTERFACE_LINK_LIBRARIES "gnuradio::gnuradio-runtime;/usr/local/cuda/lib64/libcudart.so;/usr/local/cuda/lib64/libcublas.so;/usr/local/cuda/lib64/libcufft.so;/usr/local/cuda/lib64/libnpps.so;/usr/local/cuda/lib64/libnppc.so"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

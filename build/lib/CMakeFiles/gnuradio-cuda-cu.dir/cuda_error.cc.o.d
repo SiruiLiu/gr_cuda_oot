@@ -1,7 +1,7 @@
 lib/CMakeFiles/gnuradio-cuda-cu.dir/cuda_error.cc.o: \
- /home/dayao/Projects/gpu/gr-cuda/lib/cuda_error.cc \
+ /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/lib/cuda_error.cc \
  /usr/include/stdc-predef.h \
- /home/dayao/Projects/gpu/gr-cuda/lib/../include/gnuradio/cuda/cuda_error.h \
+ /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/lib/../include/gnuradio/cuda/cuda_error.h \
  /usr/local/cuda/include/cuda.h /usr/include/c++/13/stdlib.h \
  /usr/include/c++/13/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

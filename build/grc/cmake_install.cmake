@@ -1,4 +1,4 @@
-# Install script for directory: /home/dayao/Projects/gpu/gr-cuda/grc
+# Install script for directory: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/grc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,13 +44,13 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES
-    "/home/dayao/Projects/gpu/gr-cuda/grc/cuda.domain.yml"
-    "/home/dayao/Projects/gpu/gr-cuda/grc/cuda_copy.block.yml"
-    "/home/dayao/Projects/gpu/gr-cuda/grc/cuda_multiply_const_xx.block.yml"
-    "/home/dayao/Projects/gpu/gr-cuda/grc/cuda_load.block.yml"
-    "/home/dayao/Projects/gpu/gr-cuda/grc/cuda_cufft.block.yml"
-    "/home/dayao/Projects/gpu/gr-cuda/grc/cuda_Multi_Channel_DDC.block.yml"
-    "/home/dayao/Projects/gpu/gr-cuda/grc/cuda_cufft_sync.block.yml"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/grc/cuda.domain.yml"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/grc/cuda_copy.block.yml"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/grc/cuda_multiply_const_xx.block.yml"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/grc/cuda_load.block.yml"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/grc/cuda_cufft.block.yml"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/grc/cuda_Multi_Channel_DDC.block.yml"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/grc/cuda_cufft_sync.block.yml"
     )
 endif()
 

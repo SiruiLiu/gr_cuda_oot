@@ -1,4 +1,4 @@
-# Install script for directory: /home/dayao/Projects/gpu/gr-cuda/python/cuda
+# Install script for directory: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,19 +43,19 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/cuda" TYPE FILE FILES "/home/dayao/Projects/gpu/gr-cuda/python/cuda/__init__.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/cuda" TYPE FILE FILES "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/__init__.py")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/dist-packages/gnuradio/cuda" TYPE FILE FILES
-    "/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/__init__.pyc"
-    "/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/__init__.pyo"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/__init__.pyc"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/__init__.pyo"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings/cmake_install.cmake")
+  include("/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/bindings/cmake_install.cmake")
 
 endif()
 

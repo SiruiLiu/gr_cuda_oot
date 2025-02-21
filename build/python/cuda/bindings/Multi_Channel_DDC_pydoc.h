@@ -15,10 +15,32 @@
  */
 
 
-static const char* __doc_gr_cuda_Multi_Channel_DDC = R"doc()doc";
+static const char* __doc_gr_cuda_Multi_Channel_DDC = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Return a shared_ptr to a new instance of cuda::Multi_Channel_DDC.
+
+To avoid accidental use of raw pointers, cuda::Multi_Channel_DDC's constructor is in a private implementation class. cuda::Multi_Channel_DDC::make is the public interface for creating new instances.
+
+Args:
+    channel_num : 
+    sample_rate : 
+    vector_length : )doc";
 
 
 static const char* __doc_gr_cuda_Multi_Channel_DDC_Multi_Channel_DDC = R"doc()doc";
 
 
-static const char* __doc_gr_cuda_Multi_Channel_DDC_make = R"doc()doc";
+static const char* __doc_gr_cuda_Multi_Channel_DDC_make = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Return a shared_ptr to a new instance of cuda::Multi_Channel_DDC.
+
+To avoid accidental use of raw pointers, cuda::Multi_Channel_DDC's constructor is in a private implementation class. cuda::Multi_Channel_DDC::make is the public interface for creating new instances.
+
+Args:
+    channel_num : 
+    sample_rate : 
+    vector_length : )doc";

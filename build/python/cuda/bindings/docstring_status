@@ -1,1 +1,12 @@
-DONE
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/copy_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/copy_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/multiply_const_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/multiply_const_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/load_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/load_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/cufft_sync_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/cufft_sync_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/Multi_Channel_DDC_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/Multi_Channel_DDC_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/cufft_pydoc_template.h
+PASS: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings/cufft_pydoc_template.h

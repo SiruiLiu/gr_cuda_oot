@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dayao/Projects/gpu/gr-cuda
+CMAKE_SOURCE_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dayao/Projects/gpu/gr-cuda/build
+CMAKE_BINARY_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles /home/dayao/Projects/gpu/gr-cuda/build/grc//CMakeFiles/progress.marks
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grc/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles 0
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/CMakeFiles /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/grc//CMakeFiles/progress.marks
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grc/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grc/clean
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grc/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,17 +158,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grc/preinstall
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grc/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grc/preinstall
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grc/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -195,6 +195,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

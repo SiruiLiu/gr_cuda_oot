@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dayao/Projects/gpu/gr-cuda
+CMAKE_SOURCE_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dayao/Projects/gpu/gr-cuda/build
+CMAKE_BINARY_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build
 
 # Utility rule file for cuda_docstrings.
 
@@ -69,8 +69,8 @@ include python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/progress.make
 python/cuda/bindings/CMakeFiles/cuda_docstrings: python/cuda/bindings/docstring_status
 
 python/cuda/bindings/docstring_status:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying cuda docstring templates as pybind headers ..."
-	cd /home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings && /usr/bin/python3 /home/dayao/Projects/gpu/gr-cuda/docs/doxygen/update_pydoc.py copy --bindings_dir /home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings/docstrings --output_dir /home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Adding docstrings into cuda pybind headers ..."
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/bindings && /usr/bin/python3 /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/docs/doxygen/update_pydoc.py sub --json_path /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/bindings/extracted_docstrings.json --bindings_dir /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings/docstrings --output_dir /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/bindings --filter gr::cuda
 
 cuda_docstrings: python/cuda/bindings/CMakeFiles/cuda_docstrings
 cuda_docstrings: python/cuda/bindings/docstring_status
@@ -82,10 +82,10 @@ python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/build: cuda_docstrings
 .PHONY : python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/build
 
 python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/clean:
-	cd /home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings && $(CMAKE_COMMAND) -P CMakeFiles/cuda_docstrings.dir/cmake_clean.cmake
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/bindings && $(CMAKE_COMMAND) -P CMakeFiles/cuda_docstrings.dir/cmake_clean.cmake
 .PHONY : python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/clean
 
 python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/depend:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dayao/Projects/gpu/gr-cuda /home/dayao/Projects/gpu/gr-cuda/python/cuda/bindings /home/dayao/Projects/gpu/gr-cuda/build /home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings /home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/python/cuda/bindings /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/bindings /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/depend
 

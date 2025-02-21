@@ -16,12 +16,28 @@
 
 
  
- static const char *__doc_gr_cuda_multiply_const = R"doc()doc";
+ static const char *__doc_gr_cuda_multiply_const = R"doc(output = input * constant
+
+Constructor Specific Documentation:
+
+Create an instance of multiply_const.
+
+Args:
+    k : multiplicative constant
+    vlen : number of items in vector)doc";
 
 
  static const char *__doc_gr_cuda_multiply_const_multiply_const = R"doc()doc";
 
 
- static const char *__doc_gr_cuda_multiply_const_make = R"doc()doc";
+ static const char *__doc_gr_cuda_multiply_const_make = R"doc(output = input * constant
+
+Constructor Specific Documentation:
+
+Create an instance of multiply_const.
+
+Args:
+    k : multiplicative constant
+    vlen : number of items in vector)doc";
 
   

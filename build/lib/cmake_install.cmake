@@ -1,4 +1,4 @@
-# Install script for directory: /home/dayao/Projects/gpu/gr-cuda/lib
+# Install script for directory: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -55,8 +55,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu" TYPE SHARED_LIBRARY FILES
-    "/home/dayao/Projects/gpu/gr-cuda/build/lib/libgnuradio-cuda.so.1.0.0.0"
-    "/home/dayao/Projects/gpu/gr-cuda/build/lib/libgnuradio-cuda.so.1.0.0"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/lib/libgnuradio-cuda.so.1.0.0.0"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/lib/libgnuradio-cuda.so.1.0.0"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu/libgnuradio-cuda.so.1.0.0.0"
@@ -66,7 +66,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/usr/local/cuda/lib64:/usr/local/cuda-12.8/lib64:/home/dayao/anaconda3/lib:"
+           OLD_RPATH "/usr/local/cuda/lib64:/home/drizzt/anaconda3/lib:"
            NEW_RPATH "")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/usr/bin/strip" "${file}")
@@ -76,14 +76,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu" TYPE SHARED_LIBRARY FILES "/home/dayao/Projects/gpu/gr-cuda/build/lib/libgnuradio-cuda.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu" TYPE SHARED_LIBRARY FILES "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/lib/libgnuradio-cuda.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-cuda/gnuradio-cudaTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-cuda/gnuradio-cudaTargets.cmake"
-         "/home/dayao/Projects/gpu/gr-cuda/build/lib/CMakeFiles/Export/3319ab5d687472f0c9ad007201e72a02/gnuradio-cudaTargets.cmake")
+         "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/lib/CMakeFiles/Export/3319ab5d687472f0c9ad007201e72a02/gnuradio-cudaTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-cuda/gnuradio-cudaTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -96,13 +96,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-cuda" TYPE FILE FILES "/home/dayao/Projects/gpu/gr-cuda/build/lib/CMakeFiles/Export/3319ab5d687472f0c9ad007201e72a02/gnuradio-cudaTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-cuda" TYPE FILE FILES "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/lib/CMakeFiles/Export/3319ab5d687472f0c9ad007201e72a02/gnuradio-cudaTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-cuda" TYPE FILE FILES "/home/dayao/Projects/gpu/gr-cuda/build/lib/CMakeFiles/Export/3319ab5d687472f0c9ad007201e72a02/gnuradio-cudaTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-cuda" TYPE FILE FILES "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/lib/CMakeFiles/Export/3319ab5d687472f0c9ad007201e72a02/gnuradio-cudaTargets-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-cuda" TYPE FILE FILES "/home/dayao/Projects/gpu/gr-cuda/build/lib/cmake/Modules/gnuradio-cudaConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-cuda" TYPE FILE FILES "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/lib/cmake/Modules/gnuradio-cudaConfig.cmake")
 endif()
 

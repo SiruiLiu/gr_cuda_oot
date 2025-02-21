@@ -15,10 +15,34 @@
  */
 
 
-static const char* __doc_gr_cuda_cufft = R"doc()doc";
+static const char* __doc_gr_cuda_cufft = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Return a shared_ptr to a new instance of cuda::cufft.
+
+To avoid accidental use of raw pointers, cuda::cufft's constructor is in a private implementation class. cuda::cufft::make is the public interface for creating new instances.
+
+Args:
+    fft_num : 
+    len_key : 
+    forward : 
+    win_type : )doc";
 
 
 static const char* __doc_gr_cuda_cufft_cufft = R"doc()doc";
 
 
-static const char* __doc_gr_cuda_cufft_make = R"doc()doc";
+static const char* __doc_gr_cuda_cufft_make = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Return a shared_ptr to a new instance of cuda::cufft.
+
+To avoid accidental use of raw pointers, cuda::cufft's constructor is in a private implementation class. cuda::cufft::make is the public interface for creating new instances.
+
+Args:
+    fft_num : 
+    len_key : 
+    forward : 
+    win_type : )doc";

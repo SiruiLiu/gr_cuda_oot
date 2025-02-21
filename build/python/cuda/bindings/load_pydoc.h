@@ -16,12 +16,34 @@
 
 
  
- static const char *__doc_gr_cuda_load = R"doc()doc";
+ static const char *__doc_gr_cuda_load = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Load block for testing CUDA workflows.
+
+The load block provides a mechanism for loading down the cuda processing with a for loop. This is useful for hypothetical profiling and seeing gains in data transfers using the custom buffers
+
+Args:
+    iterations : 
+    itemsize : 
+    use_cb : )doc";
 
 
  static const char *__doc_gr_cuda_load_load = R"doc()doc";
 
 
- static const char *__doc_gr_cuda_load_make = R"doc()doc";
+ static const char *__doc_gr_cuda_load_make = R"doc(<+description of block+>
+
+Constructor Specific Documentation:
+
+Load block for testing CUDA workflows.
+
+The load block provides a mechanism for loading down the cuda processing with a for loop. This is useful for hypothetical profiling and seeing gains in data transfers using the custom buffers
+
+Args:
+    iterations : 
+    itemsize : 
+    use_cb : )doc";
 
   

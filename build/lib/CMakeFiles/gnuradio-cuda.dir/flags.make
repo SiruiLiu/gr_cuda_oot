@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DGR_CTRLPORT -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -Dgnuradio_cuda_EXPORTS
 
-CXX_INCLUDES = -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /home/dayao/anaconda3/include
+CXX_INCLUDES = -I/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include -isystem /home/drizzt/anaconda3/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden
 

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dayao/Projects/gpu/gr-cuda
+CMAKE_SOURCE_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dayao/Projects/gpu/gr-cuda/build
+CMAKE_BINARY_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles /home/dayao/Projects/gpu/gr-cuda/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/CMakeFiles /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -224,17 +224,30 @@ pygen_apps_9a6dd283c3de653fbca500f9721f634f/fast:
 .PHONY : pygen_apps_9a6dd283c3de653fbca500f9721f634f/fast
 
 #=============================================================================
-# Target rules for targets named pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971
+# Target rules for targets named doxygen_target
 
 # Build rule for target.
-pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971
-.PHONY : pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971
+doxygen_target: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 doxygen_target
+.PHONY : doxygen_target
 
 # fast build rule for target.
-pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971/fast:
-	$(MAKE) $(MAKESILENT) -f python/cuda/CMakeFiles/pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971.dir/build.make python/cuda/CMakeFiles/pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971.dir/build
-.PHONY : pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971/fast
+doxygen_target/fast:
+	$(MAKE) $(MAKESILENT) -f docs/doxygen/CMakeFiles/doxygen_target.dir/build.make docs/doxygen/CMakeFiles/doxygen_target.dir/build
+.PHONY : doxygen_target/fast
+
+#=============================================================================
+# Target rules for targets named pygen_python_cuda_971dd5c8d553acd190dcb89b68b1f2fc
+
+# Build rule for target.
+pygen_python_cuda_971dd5c8d553acd190dcb89b68b1f2fc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pygen_python_cuda_971dd5c8d553acd190dcb89b68b1f2fc
+.PHONY : pygen_python_cuda_971dd5c8d553acd190dcb89b68b1f2fc
+
+# fast build rule for target.
+pygen_python_cuda_971dd5c8d553acd190dcb89b68b1f2fc/fast:
+	$(MAKE) $(MAKESILENT) -f python/cuda/CMakeFiles/pygen_python_cuda_971dd5c8d553acd190dcb89b68b1f2fc.dir/build.make python/cuda/CMakeFiles/pygen_python_cuda_971dd5c8d553acd190dcb89b68b1f2fc.dir/build
+.PHONY : pygen_python_cuda_971dd5c8d553acd190dcb89b68b1f2fc/fast
 
 #=============================================================================
 # Target rules for targets named copy_module_for_tests
@@ -261,6 +274,19 @@ cuda_python: cmake_check_build_system
 cuda_python/fast:
 	$(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/build
 .PHONY : cuda_python/fast
+
+#=============================================================================
+# Target rules for targets named extracted_docstrings
+
+# Build rule for target.
+extracted_docstrings: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 extracted_docstrings
+.PHONY : extracted_docstrings
+
+# fast build rule for target.
+extracted_docstrings/fast:
+	$(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/extracted_docstrings.dir/build.make python/cuda/bindings/CMakeFiles/extracted_docstrings.dir/build
+.PHONY : extracted_docstrings/fast
 
 #=============================================================================
 # Target rules for targets named cuda_docstrings
@@ -304,8 +330,10 @@ help:
 	@echo "... copy_bindings_for_tests"
 	@echo "... copy_module_for_tests"
 	@echo "... cuda_docstrings"
+	@echo "... doxygen_target"
+	@echo "... extracted_docstrings"
 	@echo "... pygen_apps_9a6dd283c3de653fbca500f9721f634f"
-	@echo "... pygen_python_cuda_1b9afbe20ebc7817eda80ee5d71d1971"
+	@echo "... pygen_python_cuda_971dd5c8d553acd190dcb89b68b1f2fc"
 	@echo "... uninstall"
 	@echo "... cuda_python"
 	@echo "... gnuradio-cuda"

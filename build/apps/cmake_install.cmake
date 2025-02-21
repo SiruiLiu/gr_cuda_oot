@@ -1,4 +1,4 @@
-# Install script for directory: /home/dayao/Projects/gpu/gr-cuda/apps
+# Install script for directory: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

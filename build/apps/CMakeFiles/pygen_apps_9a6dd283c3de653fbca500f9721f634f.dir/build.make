@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dayao/Projects/gpu/gr-cuda
+CMAKE_SOURCE_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dayao/Projects/gpu/gr-cuda/build
+CMAKE_BINARY_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build
 
 # Utility rule file for pygen_apps_9a6dd283c3de653fbca500f9721f634f.
 
@@ -74,10 +74,10 @@ apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/build: pygen_app
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/build
 
 apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/clean:
-	cd /home/dayao/Projects/gpu/gr-cuda/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/cmake_clean.cmake
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/cmake_clean.cmake
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/clean
 
 apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/depend:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dayao/Projects/gpu/gr-cuda /home/dayao/Projects/gpu/gr-cuda/apps /home/dayao/Projects/gpu/gr-cuda/build /home/dayao/Projects/gpu/gr-cuda/build/apps /home/dayao/Projects/gpu/gr-cuda/build/apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/apps /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/apps /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/depend
 

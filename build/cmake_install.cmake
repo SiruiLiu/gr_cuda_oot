@@ -1,4 +1,4 @@
-# Install script for directory: /home/dayao/Projects/gpu/gr-cuda
+# Install script for directory: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/dayao/Projects/gpu/gr-cuda/build/include/gnuradio/cuda/cmake_install.cmake")
-  include("/home/dayao/Projects/gpu/gr-cuda/build/lib/cmake_install.cmake")
-  include("/home/dayao/Projects/gpu/gr-cuda/build/apps/cmake_install.cmake")
-  include("/home/dayao/Projects/gpu/gr-cuda/build/docs/cmake_install.cmake")
-  include("/home/dayao/Projects/gpu/gr-cuda/build/python/cuda/cmake_install.cmake")
-  include("/home/dayao/Projects/gpu/gr-cuda/build/grc/cmake_install.cmake")
+  include("/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/include/gnuradio/cuda/cmake_install.cmake")
+  include("/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/lib/cmake_install.cmake")
+  include("/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/apps/cmake_install.cmake")
+  include("/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/docs/cmake_install.cmake")
+  include("/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/cmake_install.cmake")
+  include("/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/grc/cmake_install.cmake")
 
 endif()
 
@@ -61,5 +61,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dayao/Projects/gpu/gr-cuda/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

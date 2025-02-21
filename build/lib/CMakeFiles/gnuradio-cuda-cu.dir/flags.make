@@ -11,7 +11,7 @@ CUDA_FLAGS = -O3 -DNDEBUG -std=c++17 "--generate-code=arch=compute_60,code=[comp
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/dayao/Projects/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include
+CXX_INCLUDES = -I/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/lib/../include -I/usr/local/cuda/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda
+# Install script for directory: /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,16 +44,16 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gnuradio/cuda" TYPE FILE FILES
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/api.h"
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cuda_error.h"
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cuda_buffer.h"
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cuda_block.h"
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/copy.h"
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/multiply_const.h"
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/load.h"
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cufft.h"
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/Multi_Channel_DDC.h"
-    "/home/dayao/Projects/gpu/gr-cuda/include/gnuradio/cuda/cufft_sync.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/api.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/cuda_error.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/cuda_buffer.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/cuda_block.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/copy.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/multiply_const.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/load.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/cufft.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/Multi_Channel_DDC.h"
+    "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/include/gnuradio/cuda/cufft_sync.h"
     )
 endif()
 

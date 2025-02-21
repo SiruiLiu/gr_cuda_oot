@@ -1,10 +1,10 @@
 # http://www.vtk.org/Wiki/CMake_FAQ#Can_I_do_.22make_uninstall.22_with_CMake.3F
 
-IF(NOT EXISTS "/home/dayao/Projects/gpu/gr-cuda/build/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/home/dayao/Projects/gpu/gr-cuda/build/install_manifest.txt\"")
-ENDIF(NOT EXISTS "/home/dayao/Projects/gpu/gr-cuda/build/install_manifest.txt")
+IF(NOT EXISTS "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/install_manifest.txt\"")
+ENDIF(NOT EXISTS "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/install_manifest.txt")
 
-FILE(READ "/home/dayao/Projects/gpu/gr-cuda/build/install_manifest.txt" files)
+FILE(READ "/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

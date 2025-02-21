@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dayao/Projects/gpu/gr-cuda
+CMAKE_SOURCE_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dayao/Projects/gpu/gr-cuda/build
+CMAKE_BINARY_DIR = /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles /home/dayao/Projects/gpu/gr-cuda/build/python/cuda/bindings//CMakeFiles/progress.marks
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dayao/Projects/gpu/gr-cuda/build/CMakeFiles 0
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/CMakeFiles /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/bindings//CMakeFiles/progress.marks
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/clean
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +158,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/preinstall
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/preinstall
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 python/cuda/bindings/CMakeFiles/cuda_python.dir/rule:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/CMakeFiles/cuda_python.dir/rule
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/CMakeFiles/cuda_python.dir/rule
 .PHONY : python/cuda/bindings/CMakeFiles/cuda_python.dir/rule
 
 # Convenience name for target.
@@ -182,12 +182,26 @@ cuda_python: python/cuda/bindings/CMakeFiles/cuda_python.dir/rule
 
 # fast build rule for target.
 cuda_python/fast:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/build
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/build
 .PHONY : cuda_python/fast
 
 # Convenience name for target.
+python/cuda/bindings/CMakeFiles/extracted_docstrings.dir/rule:
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/CMakeFiles/extracted_docstrings.dir/rule
+.PHONY : python/cuda/bindings/CMakeFiles/extracted_docstrings.dir/rule
+
+# Convenience name for target.
+extracted_docstrings: python/cuda/bindings/CMakeFiles/extracted_docstrings.dir/rule
+.PHONY : extracted_docstrings
+
+# fast build rule for target.
+extracted_docstrings/fast:
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/extracted_docstrings.dir/build.make python/cuda/bindings/CMakeFiles/extracted_docstrings.dir/build
+.PHONY : extracted_docstrings/fast
+
+# Convenience name for target.
 python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/rule:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/rule
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/rule
 .PHONY : python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/rule
 
 # Convenience name for target.
@@ -196,12 +210,12 @@ cuda_docstrings: python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/rule
 
 # fast build rule for target.
 cuda_docstrings/fast:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/build.make python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/build
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/build.make python/cuda/bindings/CMakeFiles/cuda_docstrings.dir/build
 .PHONY : cuda_docstrings/fast
 
 # Convenience name for target.
 python/cuda/bindings/CMakeFiles/copy_bindings_for_tests.dir/rule:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/CMakeFiles/copy_bindings_for_tests.dir/rule
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/cuda/bindings/CMakeFiles/copy_bindings_for_tests.dir/rule
 .PHONY : python/cuda/bindings/CMakeFiles/copy_bindings_for_tests.dir/rule
 
 # Convenience name for target.
@@ -210,7 +224,7 @@ copy_bindings_for_tests: python/cuda/bindings/CMakeFiles/copy_bindings_for_tests
 
 # fast build rule for target.
 copy_bindings_for_tests/fast:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/copy_bindings_for_tests.dir/build.make python/cuda/bindings/CMakeFiles/copy_bindings_for_tests.dir/build
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/copy_bindings_for_tests.dir/build.make python/cuda/bindings/CMakeFiles/copy_bindings_for_tests.dir/build
 .PHONY : copy_bindings_for_tests/fast
 
 Multi_Channel_DDC_python.o: Multi_Channel_DDC_python.cc.o
@@ -218,7 +232,7 @@ Multi_Channel_DDC_python.o: Multi_Channel_DDC_python.cc.o
 
 # target to build an object file
 Multi_Channel_DDC_python.cc.o:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/Multi_Channel_DDC_python.cc.o
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/Multi_Channel_DDC_python.cc.o
 .PHONY : Multi_Channel_DDC_python.cc.o
 
 Multi_Channel_DDC_python.i: Multi_Channel_DDC_python.cc.i
@@ -226,7 +240,7 @@ Multi_Channel_DDC_python.i: Multi_Channel_DDC_python.cc.i
 
 # target to preprocess a source file
 Multi_Channel_DDC_python.cc.i:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/Multi_Channel_DDC_python.cc.i
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/Multi_Channel_DDC_python.cc.i
 .PHONY : Multi_Channel_DDC_python.cc.i
 
 Multi_Channel_DDC_python.s: Multi_Channel_DDC_python.cc.s
@@ -234,7 +248,7 @@ Multi_Channel_DDC_python.s: Multi_Channel_DDC_python.cc.s
 
 # target to generate assembly for a file
 Multi_Channel_DDC_python.cc.s:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/Multi_Channel_DDC_python.cc.s
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/Multi_Channel_DDC_python.cc.s
 .PHONY : Multi_Channel_DDC_python.cc.s
 
 copy_python.o: copy_python.cc.o
@@ -242,7 +256,7 @@ copy_python.o: copy_python.cc.o
 
 # target to build an object file
 copy_python.cc.o:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/copy_python.cc.o
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/copy_python.cc.o
 .PHONY : copy_python.cc.o
 
 copy_python.i: copy_python.cc.i
@@ -250,7 +264,7 @@ copy_python.i: copy_python.cc.i
 
 # target to preprocess a source file
 copy_python.cc.i:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/copy_python.cc.i
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/copy_python.cc.i
 .PHONY : copy_python.cc.i
 
 copy_python.s: copy_python.cc.s
@@ -258,7 +272,7 @@ copy_python.s: copy_python.cc.s
 
 # target to generate assembly for a file
 copy_python.cc.s:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/copy_python.cc.s
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/copy_python.cc.s
 .PHONY : copy_python.cc.s
 
 cufft_python.o: cufft_python.cc.o
@@ -266,7 +280,7 @@ cufft_python.o: cufft_python.cc.o
 
 # target to build an object file
 cufft_python.cc.o:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_python.cc.o
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_python.cc.o
 .PHONY : cufft_python.cc.o
 
 cufft_python.i: cufft_python.cc.i
@@ -274,7 +288,7 @@ cufft_python.i: cufft_python.cc.i
 
 # target to preprocess a source file
 cufft_python.cc.i:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_python.cc.i
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_python.cc.i
 .PHONY : cufft_python.cc.i
 
 cufft_python.s: cufft_python.cc.s
@@ -282,7 +296,7 @@ cufft_python.s: cufft_python.cc.s
 
 # target to generate assembly for a file
 cufft_python.cc.s:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_python.cc.s
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_python.cc.s
 .PHONY : cufft_python.cc.s
 
 cufft_sync_python.o: cufft_sync_python.cc.o
@@ -290,7 +304,7 @@ cufft_sync_python.o: cufft_sync_python.cc.o
 
 # target to build an object file
 cufft_sync_python.cc.o:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_sync_python.cc.o
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_sync_python.cc.o
 .PHONY : cufft_sync_python.cc.o
 
 cufft_sync_python.i: cufft_sync_python.cc.i
@@ -298,7 +312,7 @@ cufft_sync_python.i: cufft_sync_python.cc.i
 
 # target to preprocess a source file
 cufft_sync_python.cc.i:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_sync_python.cc.i
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_sync_python.cc.i
 .PHONY : cufft_sync_python.cc.i
 
 cufft_sync_python.s: cufft_sync_python.cc.s
@@ -306,7 +320,7 @@ cufft_sync_python.s: cufft_sync_python.cc.s
 
 # target to generate assembly for a file
 cufft_sync_python.cc.s:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_sync_python.cc.s
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/cufft_sync_python.cc.s
 .PHONY : cufft_sync_python.cc.s
 
 load_python.o: load_python.cc.o
@@ -314,7 +328,7 @@ load_python.o: load_python.cc.o
 
 # target to build an object file
 load_python.cc.o:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/load_python.cc.o
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/load_python.cc.o
 .PHONY : load_python.cc.o
 
 load_python.i: load_python.cc.i
@@ -322,7 +336,7 @@ load_python.i: load_python.cc.i
 
 # target to preprocess a source file
 load_python.cc.i:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/load_python.cc.i
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/load_python.cc.i
 .PHONY : load_python.cc.i
 
 load_python.s: load_python.cc.s
@@ -330,7 +344,7 @@ load_python.s: load_python.cc.s
 
 # target to generate assembly for a file
 load_python.cc.s:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/load_python.cc.s
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/load_python.cc.s
 .PHONY : load_python.cc.s
 
 multiply_const_python.o: multiply_const_python.cc.o
@@ -338,7 +352,7 @@ multiply_const_python.o: multiply_const_python.cc.o
 
 # target to build an object file
 multiply_const_python.cc.o:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/multiply_const_python.cc.o
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/multiply_const_python.cc.o
 .PHONY : multiply_const_python.cc.o
 
 multiply_const_python.i: multiply_const_python.cc.i
@@ -346,7 +360,7 @@ multiply_const_python.i: multiply_const_python.cc.i
 
 # target to preprocess a source file
 multiply_const_python.cc.i:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/multiply_const_python.cc.i
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/multiply_const_python.cc.i
 .PHONY : multiply_const_python.cc.i
 
 multiply_const_python.s: multiply_const_python.cc.s
@@ -354,7 +368,7 @@ multiply_const_python.s: multiply_const_python.cc.s
 
 # target to generate assembly for a file
 multiply_const_python.cc.s:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/multiply_const_python.cc.s
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/multiply_const_python.cc.s
 .PHONY : multiply_const_python.cc.s
 
 python_bindings.o: python_bindings.cc.o
@@ -362,7 +376,7 @@ python_bindings.o: python_bindings.cc.o
 
 # target to build an object file
 python_bindings.cc.o:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/python_bindings.cc.o
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/python_bindings.cc.o
 .PHONY : python_bindings.cc.o
 
 python_bindings.i: python_bindings.cc.i
@@ -370,7 +384,7 @@ python_bindings.i: python_bindings.cc.i
 
 # target to preprocess a source file
 python_bindings.cc.i:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/python_bindings.cc.i
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/python_bindings.cc.i
 .PHONY : python_bindings.cc.i
 
 python_bindings.s: python_bindings.cc.s
@@ -378,7 +392,7 @@ python_bindings.s: python_bindings.cc.s
 
 # target to generate assembly for a file
 python_bindings.cc.s:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/python_bindings.cc.s
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(MAKE) $(MAKESILENT) -f python/cuda/bindings/CMakeFiles/cuda_python.dir/build.make python/cuda/bindings/CMakeFiles/cuda_python.dir/python_bindings.cc.s
 .PHONY : python_bindings.cc.s
 
 # Help Target
@@ -396,6 +410,7 @@ help:
 	@echo "... test"
 	@echo "... copy_bindings_for_tests"
 	@echo "... cuda_docstrings"
+	@echo "... extracted_docstrings"
 	@echo "... cuda_python"
 	@echo "... Multi_Channel_DDC_python.o"
 	@echo "... Multi_Channel_DDC_python.i"
@@ -429,6 +444,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dayao/Projects/gpu/gr-cuda/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
