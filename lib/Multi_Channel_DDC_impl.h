@@ -9,6 +9,7 @@
 #define INCLUDED_CUDA_MULTI_CHANNEL_DDC_IMPL_H
 
 #include "cufft_impl.h"
+#include <cstddef>
 #include <cuda_device_runtime_api.h>
 #include <cuda_runtime_api.h>
 #include <cufft.h>
@@ -36,15 +37,23 @@ private:
     cudaDeviceProp prop;
 
     size_t bufsizeForEstimMaximum;   // 估计最大值需要分配的内存空间的大小
+    size_t bufsizeForSmooth;         // 进行平滑滤波需要分配的内存空间大小
 
     //* Pointers
     float*        win_coe            = nullptr;
     cufftComplex* p_fft_memory_block = nullptr;
     float*        p_spectrum_block   = nullptr;
     float*        p_square_sum       = nullptr;
+    float*        p_smoothed_block   = nullptr;
 
     Npp8u* bufForEstimMaximum = nullptr;   // NPP库估计最大值用到的显存空间指针
     float* pMaximumVec        = nullptr;   // 每个通道频谱最大值结果。
+
+    //* Variable for filter
+    Npp32f*        pSmoothKernel      = nullptr;
+    const NppiSize smooth_kernel_size = {32, 1};
+    NppiPoint      iAnchor            = {int(floor(smooth_kernel_size.width * 0.5)),
+                                         0};   // 直接计算为 kernel.width/2
 
     //* GPU grid and block size variables
     dim3 i_block_size_for_win;
@@ -97,6 +106,14 @@ protected:
      * @brief 各通道峰值功率估计
      */
     void estimMaximumPerChannels();
+    /**
+     * @brief 准备平滑操作的相关参数和卷积核
+     */
+    void prepareSmooth();
+    /**
+     * @brief 平滑处理
+     */
+    void Smooth();
     /**
      * @brief 打印GPU中数据的值
      *

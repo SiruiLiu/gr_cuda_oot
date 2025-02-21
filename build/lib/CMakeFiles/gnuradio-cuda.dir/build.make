@@ -194,6 +194,9 @@ lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: /usr/local/cuda/lib64/libc
 lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: /usr/local/cuda/lib64/libcufft.so
 lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: /usr/local/cuda/lib64/libnpps.so
 lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: /usr/local/cuda/lib64/libnppc.so
+lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: /usr/local/cuda/lib64/libnppig.so
+lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: /usr/local/cuda/lib64/libnppim.so
+lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: /usr/local/cuda/lib64/libnppif.so
 lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: lib/libgnuradio-cuda-cu.a
 lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libgnuradio-pmt.so.3.10.9.2
 lib/CMakeFiles/gnuradio-cuda.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libvolk.so.3.1.2
@@ -240,6 +243,9 @@ lib/libgnuradio-cuda.so.1.0.0.0: /usr/local/cuda/lib64/libcublas.so
 lib/libgnuradio-cuda.so.1.0.0.0: /usr/local/cuda/lib64/libcufft.so
 lib/libgnuradio-cuda.so.1.0.0.0: /usr/local/cuda/lib64/libnpps.so
 lib/libgnuradio-cuda.so.1.0.0.0: /usr/local/cuda/lib64/libnppc.so
+lib/libgnuradio-cuda.so.1.0.0.0: /usr/local/cuda/lib64/libnppig.so
+lib/libgnuradio-cuda.so.1.0.0.0: /usr/local/cuda/lib64/libnppim.so
+lib/libgnuradio-cuda.so.1.0.0.0: /usr/local/cuda/lib64/libnppif.so
 lib/libgnuradio-cuda.so.1.0.0.0: lib/libgnuradio-cuda-cu.a
 lib/libgnuradio-cuda.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libgnuradio-pmt.so.3.10.9.2
 lib/libgnuradio-cuda.so.1.0.0.0: /usr/lib/x86_64-linux-gnu/libvolk.so.3.1.2

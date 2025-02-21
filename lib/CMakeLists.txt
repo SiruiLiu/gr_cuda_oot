@@ -58,6 +58,9 @@ target_link_libraries(gnuradio-cuda PUBLIC
     /usr/local/cuda/lib64/libcufft.so
     /usr/local/cuda/lib64/libnpps.so
     /usr/local/cuda/lib64/libnppc.so
+    /usr/local/cuda/lib64/libnppig.so
+    /usr/local/cuda/lib64/libnppim.so
+    /usr/local/cuda/lib64/libnppif.so
     )
 target_link_libraries(gnuradio-cuda PRIVATE gnuradio-cuda-cu)
 # target_link_libraries(gnuradio-cuda ${CUDA_LIBRARIES} /usr/local/cuda-12.8/lib64/libcufft.so)

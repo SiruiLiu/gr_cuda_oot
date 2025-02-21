@@ -18,17 +18,14 @@
 /usr/local/share/doc/gr-cuda/xml/classgr_1_1cuda_1_1copy__impl.xml
 /usr/local/share/doc/gr-cuda/xml/build_2test__modules_2gnuradio_2cuda_2bindings_2docstrings_2cufft__sync__pydoc__template_8h.xml
 /usr/local/share/doc/gr-cuda/xml/copy_8h.xml
-/usr/local/share/doc/gr-cuda/xml/load__pydoc_8h.xml
 /usr/local/share/doc/gr-cuda/xml/dir_b39514f218c1f58a8c333b9bc8ccfd9b.xml
 /usr/local/share/doc/gr-cuda/xml/dir_d44c64559bbebec7f509842c48db8b23.xml
-/usr/local/share/doc/gr-cuda/xml/cufft__sync__pydoc_8h.xml
 /usr/local/share/doc/gr-cuda/xml/build_2test__modules_2gnuradio_2cuda_2bindings_2docstrings_2cufft__pydoc__template_8h.xml
 /usr/local/share/doc/gr-cuda/xml/classgr_1_1cuda__buffer.xml
 /usr/local/share/doc/gr-cuda/xml/doxyfile.xsd
 /usr/local/share/doc/gr-cuda/xml/build_2test__modules_2gnuradio_2cuda_2bindings_2docstrings_2load__pydoc__template_8h.xml
 /usr/local/share/doc/gr-cuda/xml/namespacegr.xml
 /usr/local/share/doc/gr-cuda/xml/namespacestd.xml
-/usr/local/share/doc/gr-cuda/xml/multiply__const__pydoc_8h.xml
 /usr/local/share/doc/gr-cuda/xml/dir_902d6fe55786be073ae6681293cdb979.xml
 /usr/local/share/doc/gr-cuda/xml/dir_ab3dd591509f89c87d6a9fd8136a6d03.xml
 /usr/local/share/doc/gr-cuda/xml/xml.xsd
@@ -36,7 +33,6 @@
 /usr/local/share/doc/gr-cuda/xml/dir_7837fde3ab9c1fb2fc5be7b717af8d79.xml
 /usr/local/share/doc/gr-cuda/xml/classgr_1_1cuda_1_1Multi__Channel__DDC__impl.xml
 /usr/local/share/doc/gr-cuda/xml/classgr_1_1cuda_1_1cufft__impl.xml
-/usr/local/share/doc/gr-cuda/xml/copy__pydoc_8h.xml
 /usr/local/share/doc/gr-cuda/xml/dir_d5646a4d2acea6cd94665cfd9ba3943c.xml
 /usr/local/share/doc/gr-cuda/xml/index.xml
 /usr/local/share/doc/gr-cuda/xml/classgr_1_1cuda_1_1load.xml
@@ -47,7 +43,6 @@
 /usr/local/share/doc/gr-cuda/xml/load_8h.xml
 /usr/local/share/doc/gr-cuda/xml/classgr_1_1cuda_1_1load__impl.xml
 /usr/local/share/doc/gr-cuda/xml/dir_245958930b01a1821dcae9c9162c97e5.xml
-/usr/local/share/doc/gr-cuda/xml/Multi__Channel__DDC__pydoc_8h.xml
 /usr/local/share/doc/gr-cuda/xml/multiply__const__impl_8h.xml
 /usr/local/share/doc/gr-cuda/xml/dir_905268b7ad8170ad0ba2690bab33f635.xml
 /usr/local/share/doc/gr-cuda/xml/load__impl_8h.xml
@@ -59,7 +54,6 @@
 /usr/local/share/doc/gr-cuda/xml/dir_3dfcfcb6666b9c4158a8f96dfb48df95.xml
 /usr/local/share/doc/gr-cuda/xml/cuda__block_8h.xml
 /usr/local/share/doc/gr-cuda/xml/dir_ee8c7e340eed3c50440c1afd70a35711.xml
-/usr/local/share/doc/gr-cuda/xml/cufft__pydoc_8h.xml
 /usr/local/share/doc/gr-cuda/xml/compound.xsd
 /usr/local/share/doc/gr-cuda/xml/python_2cuda_2bindings_2docstrings_2cufft__sync__pydoc__template_8h.xml
 /usr/local/share/doc/gr-cuda/xml/cufft__sync__impl_8h.xml
@@ -117,7 +111,6 @@
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2copy__pydoc__template_8h_source.html
 /usr/local/share/doc/gr-cuda/html/nav_fd.png
 /usr/local/share/doc/gr-cuda/html/plus.svg
-/usr/local/share/doc/gr-cuda/html/Multi__Channel__DDC__pydoc_8h.html
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda_1_1Multi__Channel__DDC-members.html
 /usr/local/share/doc/gr-cuda/html/nav_hd.png
 /usr/local/share/doc/gr-cuda/html/dir_97aefd0d527b934f1d99a682da8fe6a9.js
@@ -127,7 +120,6 @@
 /usr/local/share/doc/gr-cuda/html/dir_3dfcfcb6666b9c4158a8f96dfb48df95.html
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2multiply__const__pydoc__template_8h_source.html
 /usr/local/share/doc/gr-cuda/html/tab_sd.png
-/usr/local/share/doc/gr-cuda/html/multiply__const__pydoc_8h.js
 /usr/local/share/doc/gr-cuda/html/dir_d5646a4d2acea6cd94665cfd9ba3943c.js
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda_1_1load.html
 /usr/local/share/doc/gr-cuda/html/load__impl_8h.html
@@ -151,7 +143,6 @@
 /usr/local/share/doc/gr-cuda/html/cuda__buffer_8h_source.html
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda_1_1cufft__sync-members.html
 /usr/local/share/doc/gr-cuda/html/dir_3e06bdc8902c2233bc5036c2f069a995.html
-/usr/local/share/doc/gr-cuda/html/cufft__sync__pydoc_8h_source.html
 /usr/local/share/doc/gr-cuda/html/dir_245958930b01a1821dcae9c9162c97e5.html
 /usr/local/share/doc/gr-cuda/html/api_8h.html
 /usr/local/share/doc/gr-cuda/html/build_2test__modules_2gnuradio_2cuda_2bindings_2docstrings_2cufft__pydoc__template_8h.html
@@ -177,7 +168,6 @@
 /usr/local/share/doc/gr-cuda/html/docs_2doxygen_2pydoc__macros_8h.html
 /usr/local/share/doc/gr-cuda/html/dir_b39514f218c1f58a8c333b9bc8ccfd9b.html
 /usr/local/share/doc/gr-cuda/html/tab_ad.png
-/usr/local/share/doc/gr-cuda/html/Multi__Channel__DDC__pydoc_8h.js
 /usr/local/share/doc/gr-cuda/html/api_8h.js
 /usr/local/share/doc/gr-cuda/html/cuda__block_8h.js
 /usr/local/share/doc/gr-cuda/html/annotated.html
@@ -196,12 +186,9 @@
 /usr/local/share/doc/gr-cuda/html/tab_a.png
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda_1_1cufft__impl.png
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda_1_1Multi__Channel__DDC__impl-members.html
-/usr/local/share/doc/gr-cuda/html/copy__pydoc_8h_source.html
 /usr/local/share/doc/gr-cuda/html/load_8h_source.html
-/usr/local/share/doc/gr-cuda/html/copy__pydoc_8h.html
 /usr/local/share/doc/gr-cuda/html/dir_c29876120f331ad7ec3d94764d02d002.js
 /usr/local/share/doc/gr-cuda/html/functions_type.html
-/usr/local/share/doc/gr-cuda/html/cufft__pydoc_8h.js
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2cufft__pydoc__template_8h.js
 /usr/local/share/doc/gr-cuda/html/dir_c29876120f331ad7ec3d94764d02d002.html
 /usr/local/share/doc/gr-cuda/html/dir_ee8c7e340eed3c50440c1afd70a35711.js
@@ -212,7 +199,6 @@
 /usr/local/share/doc/gr-cuda/html/functions.html
 /usr/local/share/doc/gr-cuda/html/docs_2doxygen_2pydoc__macros_8h_source.html
 /usr/local/share/doc/gr-cuda/html/multiply__const_8h.html
-/usr/local/share/doc/gr-cuda/html/cufft__pydoc_8h_source.html
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda_1_1multiply__const.png
 /usr/local/share/doc/gr-cuda/html/dir_49e56c817e5e54854c35e136979f97ca.js
 /usr/local/share/doc/gr-cuda/html/dir_d44c64559bbebec7f509842c48db8b23.html
@@ -225,7 +211,6 @@
 /usr/local/share/doc/gr-cuda/html/namespacegr_1_1cuda.html
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda__buffer.png
 /usr/local/share/doc/gr-cuda/html/classes.html
-/usr/local/share/doc/gr-cuda/html/cufft__sync__pydoc_8h.html
 /usr/local/share/doc/gr-cuda/html/load__impl_8h_source.html
 /usr/local/share/doc/gr-cuda/html/folderopend.svg
 /usr/local/share/doc/gr-cuda/html/build_2test__modules_2gnuradio_2cuda_2bindings_2docstrings_2multiply__const__pydoc__template_8h.html
@@ -246,7 +231,6 @@
 /usr/local/share/doc/gr-cuda/html/copy_8h.js
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda_1_1multiply__const__impl.html
 /usr/local/share/doc/gr-cuda/html/functions_func.html
-/usr/local/share/doc/gr-cuda/html/copy__pydoc_8h.js
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2copy__pydoc__template_8h.js
 /usr/local/share/doc/gr-cuda/html/tab_s.png
 /usr/local/share/doc/gr-cuda/html/copy_8h.html
@@ -262,7 +246,6 @@
 /usr/local/share/doc/gr-cuda/html/build_2test__modules_2gnuradio_2cuda_2bindings_2docstrings_2cufft__pydoc__template_8h_source.html
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2multiply__const__pydoc__template_8h.html
 /usr/local/share/doc/gr-cuda/html/cufft__sync__impl_8h_source.html
-/usr/local/share/doc/gr-cuda/html/Multi__Channel__DDC__pydoc_8h_source.html
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2cufft__pydoc__template_8h_source.html
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2multiply__const__pydoc__template_8h.js
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda__block.html
@@ -284,17 +267,14 @@
 /usr/local/share/doc/gr-cuda/html/build_2python_2cuda_2bindings_2pydoc__macros_8h_source.html
 /usr/local/share/doc/gr-cuda/html/bc_sd.png
 /usr/local/share/doc/gr-cuda/html/dir_cb1d9809cf2e3f85d45cb1c5a0b14964.js
-/usr/local/share/doc/gr-cuda/html/multiply__const__pydoc_8h.html
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2Multi__Channel__DDC__pydoc__template_8h.js
 /usr/local/share/doc/gr-cuda/html/minusd.svg
 /usr/local/share/doc/gr-cuda/html/build_2test__modules_2gnuradio_2cuda_2bindings_2docstrings_2cufft__sync__pydoc__template_8h_source.html
-/usr/local/share/doc/gr-cuda/html/multiply__const__pydoc_8h_source.html
 /usr/local/share/doc/gr-cuda/html/jquery.js
 /usr/local/share/doc/gr-cuda/html/minus.svg
 /usr/local/share/doc/gr-cuda/html/dir_359d2bec989c9a8deeeb9aee335c1c76.js
 /usr/local/share/doc/gr-cuda/html/Multi__Channel__DDC__impl_8h_source.html
 /usr/local/share/doc/gr-cuda/html/cufft_8h.html
-/usr/local/share/doc/gr-cuda/html/load__pydoc_8h_source.html
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda_1_1cufft__sync__impl-members.html
 /usr/local/share/doc/gr-cuda/html/cuda__error_8h_source.html
 /usr/local/share/doc/gr-cuda/html/dir_ab3dd591509f89c87d6a9fd8136a6d03.js
@@ -305,7 +285,6 @@
 /usr/local/share/doc/gr-cuda/html/docd.svg
 /usr/local/share/doc/gr-cuda/html/cuda__block_8h_source.html
 /usr/local/share/doc/gr-cuda/html/globals_func.html
-/usr/local/share/doc/gr-cuda/html/load__pydoc_8h.html
 /usr/local/share/doc/gr-cuda/html/folderopen.svg
 /usr/local/share/doc/gr-cuda/html/hierarchy.js
 /usr/local/share/doc/gr-cuda/html/build_2python_2cuda_2bindings_2pydoc__macros_8h.js
@@ -325,13 +304,10 @@
 /usr/local/share/doc/gr-cuda/html/dir_7837fde3ab9c1fb2fc5be7b717af8d79.html
 /usr/local/share/doc/gr-cuda/html/multiply__const__impl_8h.html
 /usr/local/share/doc/gr-cuda/html/dir_902d6fe55786be073ae6681293cdb979.html
-/usr/local/share/doc/gr-cuda/html/cufft__sync__pydoc_8h.js
 /usr/local/share/doc/gr-cuda/html/cufft_8h_source.html
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2cufft__sync__pydoc__template_8h.html
 /usr/local/share/doc/gr-cuda/html/build_2test__modules_2gnuradio_2cuda_2bindings_2docstrings_2copy__pydoc__template_8h_source.html
 /usr/local/share/doc/gr-cuda/html/load__impl_8h.js
-/usr/local/share/doc/gr-cuda/html/load__pydoc_8h.js
-/usr/local/share/doc/gr-cuda/html/cufft__pydoc_8h.html
 /usr/local/share/doc/gr-cuda/html/python_2cuda_2bindings_2docstrings_2load__pydoc__template_8h_source.html
 /usr/local/share/doc/gr-cuda/html/dir_3e06bdc8902c2233bc5036c2f069a995.js
 /usr/local/share/doc/gr-cuda/html/classgr_1_1cuda_1_1multiply__const__impl.js

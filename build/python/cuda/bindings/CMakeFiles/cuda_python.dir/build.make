@@ -208,6 +208,9 @@ python/cuda/bindings/cuda_python.cpython-312-x86_64-linux-gnu.so: /usr/local/cud
 python/cuda/bindings/cuda_python.cpython-312-x86_64-linux-gnu.so: /usr/local/cuda/lib64/libcufft.so
 python/cuda/bindings/cuda_python.cpython-312-x86_64-linux-gnu.so: /usr/local/cuda/lib64/libnpps.so
 python/cuda/bindings/cuda_python.cpython-312-x86_64-linux-gnu.so: /usr/local/cuda/lib64/libnppc.so
+python/cuda/bindings/cuda_python.cpython-312-x86_64-linux-gnu.so: /usr/local/cuda/lib64/libnppig.so
+python/cuda/bindings/cuda_python.cpython-312-x86_64-linux-gnu.so: /usr/local/cuda/lib64/libnppim.so
+python/cuda/bindings/cuda_python.cpython-312-x86_64-linux-gnu.so: /usr/local/cuda/lib64/libnppif.so
 python/cuda/bindings/cuda_python.cpython-312-x86_64-linux-gnu.so: python/cuda/bindings/CMakeFiles/cuda_python.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared module cuda_python.cpython-312-x86_64-linux-gnu.so"
 	cd /home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build/python/cuda/bindings && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cuda_python.dir/link.txt --verbose=$(VERBOSE)

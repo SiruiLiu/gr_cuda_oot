@@ -66,6 +66,8 @@ Multi_Channel_DDC_impl::~Multi_Channel_DDC_impl()
     this->cuFree(this->p_spectrum_block);
     this->cuFree(this->pMaximumVec);
     this->cuFree(this->bufForEstimMaximum);
+    this->cuFree(this->p_smoothed_block);
+    delete this->pSmoothKernel;
 }
 
 int Multi_Channel_DDC_impl::work(int noutput_items, gr_vector_const_void_star& input_items,
@@ -94,7 +96,7 @@ int Multi_Channel_DDC_impl::work(int noutput_items, gr_vector_const_void_star& i
 
     for (int i = 0; i < this->i_ch_n; i++) {
         cudaMemcpyAsync(out[i],
-                        this->p_spectrum_block + i * this->i_fft_num,
+                        this->p_smoothed_block + i * this->i_fft_num,
                         sizeof(float) * this->i_fft_num,
                         cudaMemcpyDeviceToDevice,
                         this->stream);
@@ -209,9 +211,15 @@ void Multi_Channel_DDC_impl::allocateGPUSourcesForEstim()
         &this->p_spectrum_block, sizeof(float) * this->i_ch_n * this->i_fft_num, this->stream));
     check_cuda_errors(
         cudaMallocAsync(&this->pMaximumVec, sizeof(float) * this->i_ch_n, this->stream));
-    nppsMaxGetBufferSize_32f(this->i_fft_num, &this->bufsizeForEstimMaximum);
+    check_cuda_errors(cudaMallocAsync(
+        &this->p_smoothed_block, sizeof(float) * this->i_ch_n * this->i_fft_num, this->stream));
+    NppStatus status = nppsMaxGetBufferSize_32f(this->i_fft_num, &this->bufsizeForEstimMaximum);
+    if (status != NPP_SUCCESS) {
+        std::cerr << "Error getting buffer size: " << status << std::endl;
+    }
     check_cuda_errors(
         cudaMallocAsync(&this->bufForEstimMaximum, bufsizeForEstimMaximum, this->stream));
+
 
     // 分配计算资源
     this->i_block_size_for_ssum.x = 32;
@@ -265,7 +273,52 @@ void Multi_Channel_DDC_impl::estimMaximumPerChannels()
                     this->bufForEstimMaximum);
     }
 }
+// /*
+// * 给平滑处理操作准备核函数
+// */
+// void Multi_Channel_DDC_impl::prepareSmooth()
+// {
+// this->pSmoothKernel = new float[this->smooth_kernel_size];
+// for (int i = 0; i < this->smooth_kernel_size; i++) {
+// this->pSmoothKernel[i] = 1.0f / this->smooth_kernel_size;
+// }
+// }
 
+void Multi_Channel_DDC_impl::Smooth()
+{
+    // NppStatus status = nppiFilterBoxBorder_32f_C1R(this->p_spectrum_block,
+    //                                                this->i_fft_num * sizeof(float),
+    //                                                {this->i_fft_num, 1},
+    //                                                {0, 0},
+    //                                                this->p_smoothed_block,
+    //                                                this->i_fft_num * sizeof(float),
+    //                                                {this->i_fft_num, 1},
+    //                                                this->smooth_kernel_size,
+    //                                                this->iAnchor,
+    //                                                NPP_BORDER_MIRROR);
+    // if (status != NPP_SUCCESS) {
+    //     std::cout << "Error number is: " << status << std::endl;
+    //     sleep(1);
+    // }
+    // 确保内核高度为 1（针对一维滤波）
+
+    NppStatus status =
+        nppiFilterBoxBorder_32f_C1R(this->p_spectrum_block,
+                                    this->i_fft_num * sizeof(float),   // 步长
+                                    {this->i_fft_num, 2},   // ROI 尺寸（宽度=2048，高度=1）
+                                    {0, 0},                 // 偏移量
+                                    this->p_smoothed_block,
+                                    this->i_fft_num * sizeof(float),
+                                    {this->i_fft_num, 2},
+                                    smooth_kernel_size,
+                                    iAnchor,
+                                    NPP_BORDER_REPLICATE   // 改用更通用的边界模式
+        );
+
+    if (status != NPP_SUCCESS) {
+        std::cout << "Error: " << status << std::endl;
+    }
+}
 /*
  * 参数估计函数，包括求模，求对数，平滑，求功率，带宽，信噪比和频率等
  */
@@ -298,7 +351,8 @@ void Multi_Channel_DDC_impl::cuEstimates()
           i_ch_n * this->i_fft_num,
           i_grid_size_for_abs,
           i_block_size_for_abs,
-          this->stream);               // 计算对数
+          this->stream);   // 计算对数
+    this->Smooth();
     this->estimMaximumPerChannels();   // 找出每个通道的最大值
     this->Display(this->pMaximumVec, this->i_ch_n);
     sleep(5);

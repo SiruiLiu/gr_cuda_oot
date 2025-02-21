@@ -506,7 +506,7 @@ cuda_python_LIB_DEPENDS:STATIC=general;Boost::date_time;general;Boost::program_o
 fmt_DIR:PATH=/home/drizzt/anaconda3/lib/cmake/fmt
 
 //Dependencies for the target
-gnuradio-cuda_LIB_DEPENDS:STATIC=general;gnuradio::gnuradio-runtime;general;/usr/local/cuda/lib64/libcudart.so;general;/usr/local/cuda/lib64/libcublas.so;general;/usr/local/cuda/lib64/libcufft.so;general;/usr/local/cuda/lib64/libnpps.so;general;/usr/local/cuda/lib64/libnppc.so;general;gnuradio-cuda-cu;
+gnuradio-cuda_LIB_DEPENDS:STATIC=general;gnuradio::gnuradio-runtime;general;/usr/local/cuda/lib64/libcudart.so;general;/usr/local/cuda/lib64/libcublas.so;general;/usr/local/cuda/lib64/libcufft.so;general;/usr/local/cuda/lib64/libnpps.so;general;/usr/local/cuda/lib64/libnppc.so;general;/usr/local/cuda/lib64/libnppig.so;general;/usr/local/cuda/lib64/libnppim.so;general;/usr/local/cuda/lib64/libnppif.so;general;gnuradio-cuda-cu;
 
 //Value Computed by CMake
 gr-cuda_BINARY_DIR:STATIC=/home/drizzt/Desktop/Projects/DAYAO/gpu/gr-cuda/build
